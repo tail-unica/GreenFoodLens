@@ -1,0 +1,11 @@
+__pycache__/
+.ipynb_checkpoints/
+
+*.csv
+*.xlsx
+*.html
+*.pkl
+*.parquet
+*.txt
+
+LLM\ Ingredient\ Labeling/
