@@ -3,24 +3,21 @@ import json
 import os
 import time
 
+import llama_cpp
 import polars as pl
 import outlines
-from outlines import generate
-from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaConfig
 
-from utils import ingredient_tree_from_json, traverse_ingredients, tree_to_pydantic_schema, clean_and_save_llm_output
+from utils import ingredient_tree_from_json
 from prompt_templates import prompt_templates
 
 
 # Set up argument parser to specify model name and context length
 parser = argparse.ArgumentParser()
-parser.add_argument('hf_repo_id', help="Specify the Hugging Face repository ID to use (e.g., facebook/opt-350m)")
-parser.add_argument('hf_repo_filename', help="Specify the Hugging Face repository filename to use (e.g., opt-350m.ggmlv3.q4_0.bin)")
-parser.add_argument('--tokenizer_hf_repo_id', '-tkhf', type=str, default=None, help="Specify the Hugging Face repository ID for the tokenizer (e.g., facebook/opt-350m)")
+parser.add_argument('gguf_path', help="Specify the path to the LLM GGUF file")
 parser.add_argument('--context_len', '-ctx_len', type=int, default=0, help="Specify the context length for the model")
-parser.add_argument('--temperature', type=float, default=0.2, help="Temperature for the LLM")
+parser.add_argument('--temperature', type=float, default=0, help="Temperature for the LLM")
 parser.add_argument('--top-p', type=float, default=0.9, help="Top-p sampling for the LLM")
-parser.add_argument('--top-k', type=int, default=10, help="Top-k sampling for the LLM")
+parser.add_argument('--top-k', type=int, default=1, help="Top-k sampling for the LLM")
 parser.add_argument('--prompt_type', '-pt', type=str, default="chatgpt_prompt_engineering_prompt_v1", help="Prompt sent to the LLM")
 args = parser.parse_args()
 
@@ -40,22 +37,11 @@ with open(os.path.join(script_filepath, os.pardir, 'json_melted.json'), 'r') as 
     sueatable_db = json.load(f)
     ingredient_tree = ingredient_tree_from_json(sueatable_db)
 
-path_sueatable_db_filepath = os.path.join(script_filepath, 'path_sueatable_db.txt')
-if not os.path.exists(path_sueatable_db_filepath):
-    llm_path_context = traverse_ingredients(ingredient_tree)
+llm = llama_cpp.LLama(
+    args.gguf_path,
+    n_gpu_layers=-1
+)
 
-    with open(path_sueatable_db_filepath, 'w') as f:
-        f.write(llm_path_context)
-else:
-    with open(path_sueatable_db_filepath, 'r') as f:
-        llm_path_context = f.read()
-
-path_schema = tree_to_pydantic_schema(ingredient_tree)
-
-with open(os.path.join(script_filepath, 'nemotron_llama_config.json'), 'r') as f:
-    model_config = json.load(f)
-
-tokenizer_repo_id = args.tokenizer_hf_repo_id if args.tokenizer_hf_repo_id is not None else args.hf_repo_id
 model = outlines.models.transformers(
     args.hf_repo_id,
     model_kwargs=dict(
