@@ -43,7 +43,7 @@ Reply with just the category name or 'I DON'T KNOW' if you are not sure, do not 
 Remember the ingredient is: {ingredient}
 {partial_path_instruction}
 
-Select the appropriate category as only one of the candidates categories below:
+Select the appropriate category as only one of the candidates categories below separated by '|':
 {candidates}
 
 Reply with just the category name or 'I DON'T KNOW' if you are not sure, do not generate any other text.

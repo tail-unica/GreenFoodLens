@@ -112,3 +112,31 @@ def tree_to_pydantic_schema(tree):
     full_schema = pydantic.create_model("SU-EATABLE-Path", starting_node=(Union[(i_dont_know, *starting_nodes_schemas)], ...))
 
     return full_schema
+
+
+def gbnf_grammar_choice(choices, split_chars=False, as_string=True):
+    root = "root"
+    assign_op = "::="
+    choice_op = "|"
+
+    grammar = [[root, assign_op]]
+    for i, ch in enumerate(choices):
+        opt = "option_" + str(i)
+        grammar[0].append(opt)
+        if split_chars:
+            choice_chars = list(ch)
+            grammar.append([
+                opt,
+                assign_op,
+                *['"' + choice_chars[j] + '"' if (j % 2) == 0 else choice_op for j in range(len(choice_chars) * 2 - 1)]
+            ])
+        else:
+            grammar.append([opt, assign_op, '"' + ch + '"'])
+
+        if i < len(choices) - 1:
+            grammar[0].append(choice_op)
+    
+    if as_string:
+        return "\n".join([" ".join(line) for line in grammar])
+    else:
+        return grammar
