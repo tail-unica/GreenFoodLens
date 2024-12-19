@@ -121,7 +121,7 @@ def gbnf_grammar_choice(choices, split_chars=False, as_string=True):
 
     grammar = [[root, assign_op]]
     for i, ch in enumerate(choices):
-        opt = "option_" + str(i)
+        opt = "option" + str(i)
         grammar[0].append(opt)
         if split_chars:
             choice_chars = list(ch)
