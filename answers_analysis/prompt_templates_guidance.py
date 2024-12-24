@@ -10,12 +10,12 @@ The upper level categories are:
 1) AGRICULTURAL PROCESSED: it covers any kind of plant based processed food (includes ice-cream).
 2) MEAT PRODUCTS: it covers products of terrestrial animal origin.
 3) ANIMAL DERIVED: it covers products of animal origin. This group includes milk, eggs, honey, etc.
-4) CROPS: it covers plant based product, not processed. This group includes fresh plant products, seeds, dry fruit.
+4) CROPS: it covers plant based product, not processed. This group includes fresh plant products, seeds, dry fruit and vegetables.
 5) FISH: it covers all the animals and weeds from fresh and salted waters.
 """,
     "few_shot_examples": """
 Few examples of the final paths that you should generate, but you should not generate the full path at once, just one category layer at a time.
-Note: liquors that are not beers or wines must be categorized as 'AGRICULTURAL PROCESSED -> I DON'T KNOW'
+
 Ingredient: CHICKEN BREAST
 Output: `MEAT PRODUCTS -> POULTRY MEAT -> POULTRY BONE FREE MEAT -> CHICKEN BONE FREE MEAT`
 
@@ -32,6 +32,12 @@ Output: `AGRICULTURAL PROCESSED -> I DON'T KNOW`
 Ingredient: {ingredient}
 
 Write a brief description of the ingredient and its properties. This will help you to categorize the ingredient more accurately.
+""",
+"labeling_notes": """
+The following notes should be considered when categorizing the ingredients:
+- liquors that are not beers or wines must be categorized as 'AGRICULTURAL PROCESSED -> I DON'T KNOW'
+- dried fruits or vegetables are inside the 'CROPS' category despite being processed
+- ice-cream is categorized as 'AGRICULTURAL PROCESSED' despite being a dairy product
 """,
     "partial_path_instruction": """
 Select the appropriate category to append to the partial path below.

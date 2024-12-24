@@ -1,14 +1,15 @@
 import argparse
 import json
 import os
+import re
 import time
-import tqdm
 
 import llama_cpp
 import polars as pl
+import tqdm
 
-from utils import ingredient_tree_from_json, gbnf_grammar_choice
 from prompt_templates_guidance import prompt_templates
+from utils import ingredient_tree_from_json, gbnf_grammar_choice
 
 
 # Set up argument parser to specify model name and context length
@@ -21,12 +22,28 @@ parser.add_argument('--top-p', type=float, default=1, help="Top-p sampling for t
 parser.add_argument('--top-k', type=float, default=1, help="Top-k sampling for the LLM")
 parser.add_argument('--split_grammar_chars', '-sp_gr', action='store_true', help="Split the grammar choices into individual characters")
 parser.add_argument('--verbose', action='store_true', help="Enables llama-cpp verbose mode")
+parser.add_argument('--use_all_ingredients', action='store_true', help="Use all ingredients for labeling")
 args = parser.parse_args()
 
 script_filepath = os.path.dirname(os.path.realpath(__file__))
 
-ingredients_file = pl.read_csv(os.path.join(script_filepath, os.pardir, 'ingredient_food_kg_names.csv'))
-ingredients = ingredients_file.select(pl.col('ingredient_food_kg_names').str.replace('"', ''))['ingredient_food_kg_names'].to_list()
+if re.match(r'v\d+', args.version_tag) is None:
+    raise argparse.ArgumentError("Version tag must be in the format 'vX', where X is an integer")
+else:
+    version_id = int(args.version_tag.replace('v', ''))
+
+if args.use_all_ingredients:
+    ingredients_file = pl.read_csv(os.path.join(script_filepath, os.pardir, 'ingredient_food_kg_names.csv'))
+    ingredients = ingredients_file.select(pl.col('ingredient_food_kg_names').str.replace('"', ''))['ingredient_food_kg_names'].to_list()
+else:
+    valid_answers_filepath = os.path.join(script_filepath, 'accepted_mturk_df_with_fixed_collisions_valid.csv')
+    test_answers_filepath = os.path.join(script_filepath, 'accepted_mturk_df_with_fixed_collisions_test.csv')
+    valid_answers_df = pl.read_csv(valid_answers_filepath, separator='\t')
+    test_answers_df = pl.read_csv(test_answers_filepath, separator='\t')
+    ingredients = (
+        pl.concat([valid_answers_df, test_answers_df], how='vertical')
+        .select(pl.col('ingredient').str.replace('"', ''))['ingredient'].to_list()
+    )
 
 output_path = os.path.join(script_filepath, 'LLM Ingredient Labeling', "llama_cpp_grammar")
 output_file = os.path.join(
@@ -57,6 +74,8 @@ gen_params = dict(
 system_messages = [
     {"role": "system", "content": prompt_templates["system"] + '\n' + prompt_templates["few_shot_examples"]},
 ]
+if version_id > 1:
+    system_messages.append({"role": "system", "content": prompt_templates["labeling_notes"]})
 
 if os.path.exists(output_file):
     labeled_ingredients_df = pl.read_csv(output_file, separator='\t')
