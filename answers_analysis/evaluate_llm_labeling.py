@@ -6,14 +6,15 @@ import polars as pl
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('labeled_ingredients_files', nargs='+', help="Specify the file path of the labeled ingredients")
+parser.add_argument('llm_labeled_ingredients_files', nargs='+', help="Specify the file path of the labeled ingredients")
+parser.add_argument('truth_labels_file', default='accepted_mturk_df_with_fixed_collisions_update.csv', help="Specify the file path of the truth labels")
 args = parser.parse_args()
 
 script_filepath = os.path.dirname(os.path.realpath(__file__))
 
 accepted_answers_dfs = {}
 for split in ["valid", "test"]:
-    accepted_answers_filepath = os.path.join(script_filepath, f'accepted_mturk_df_with_fixed_collisions_{split}.csv')
+    accepted_answers_filepath = os.path.join(script_filepath, f"{os.path.splitext(args.truth_labels_file)[0]}_{split}.csv")
     accepted_answers_df = pl.read_csv(accepted_answers_filepath, separator="\t")
     accepted_answers_df = accepted_answers_df.with_columns(pl.col('answer_path').str.replace('"', ''))
     accepted_answers_df = accepted_answers_df.rename({'answer_path': 'label'})
@@ -22,7 +23,7 @@ for split in ["valid", "test"]:
 
 model_names_list = []
 labeled_answers_dfs = []
-for labeled_answers_filepath in args.labeled_ingredients_files:
+for labeled_answers_filepath in args.llm_labeled_ingredients_files:
     model_name = os.path.basename(labeled_answers_filepath).replace('.csv', '').replace('labeled_ingredients_', '')
     model_names_list.append(model_name)
 
@@ -93,4 +94,35 @@ for split, split_accepted_answers_df in accepted_answers_dfs.items():
             .select(pl.col(['ingredient', 'answer_path', 'label']))
             .rename({'answer_path': 'answer_path (prediction)', 'label': 'label (ground truth)'})
             .sample(4)
+        ))
+    
+
+    valid_ingr_accepted_answers_df = accepted_answers_dfs["valid"].select(pl.col(['ingredient', 'label']))
+    mismatches_head_1 = None
+    for model_name, labeled_answers_df in zip(model_names_list, labeled_answers_dfs):
+        if mismatches_head_1 is None:
+            valid_correct_answers = valid_ingr_accepted_answers_df.join(labeled_answers_df.select(pl.all().exclude('index')), on=['ingredient'], how='inner')
+            mismatches_head_1 = (
+                valid_correct_answers
+                .with_columns(pl.col('answer_path').str.split(' -> '))
+                .with_columns(pl.col('answer_path').list.head(1).list.join(' -> ')).rename({'answer_path': f'answer_path_{model_name}'})
+            )
+        else:
+            mismatches_head_1 = mismatches_head_1.join(
+                labeled_answers_df.select(pl.all().exclude('index'))
+                .with_columns(pl.col('answer_path').str.split(' -> '))
+                .with_columns(pl.col('answer_path').list.head(1).list.join(' -> ')).rename({'answer_path': f'answer_path_{model_name}'}),
+                on=['ingredient'],
+                how='inner'
+            )
+
+    mismatches_head_1 = mismatches_head_1.filter(
+        pl.lit(False).or_(
+            *[pl.col('label').str.contains(pl.col(f'answer_path_{model_name}')).not_() for model_name in model_names_list]
+        )
+    )
+    with pl.Config(fmt_str_lengths=100, tbl_rows=-1):
+        print((
+            mismatches_head_1
+            .rename({'label': 'label (ground truth)'})
         ))

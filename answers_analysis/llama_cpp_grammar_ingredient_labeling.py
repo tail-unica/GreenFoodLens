@@ -16,6 +16,7 @@ from utils import ingredient_tree_from_json, gbnf_grammar_choice
 parser = argparse.ArgumentParser()
 parser.add_argument('gguf_path', help="Specify the path to the LLM GGUF file")
 parser.add_argument('version_tag', type=str, help="Specify the version tag for the output file")
+parser.add_argument('--truth_labels_file', '-lf', help="Specify the path to the labeled ingredients file")
 parser.add_argument('--context_len', '-ctx_len', type=int, default=0, help="Specify the context length for the model")
 parser.add_argument('--temperature', type=float, default=0, help="Temperature for the LLM")
 parser.add_argument('--top-p', type=float, default=1, help="Top-p sampling for the LLM")
@@ -23,6 +24,8 @@ parser.add_argument('--top-k', type=float, default=1, help="Top-k sampling for t
 parser.add_argument('--split_grammar_chars', '-sp_gr', action='store_true', help="Split the grammar choices into individual characters")
 parser.add_argument('--verbose', action='store_true', help="Enables llama-cpp verbose mode")
 parser.add_argument('--use_all_ingredients', action='store_true', help="Use all ingredients for labeling")
+parser.add_argument('--validation_split', type=float, default=0.5, help="Validation split for the labeled ingredients")
+parser.add_argument('--gpu_id', type=int, default=None, help="Specify the GPU ID to use for the LLM")
 args = parser.parse_args()
 
 script_filepath = os.path.dirname(os.path.realpath(__file__))
@@ -36,10 +39,20 @@ if args.use_all_ingredients:
     ingredients_file = pl.read_csv(os.path.join(script_filepath, os.pardir, 'ingredient_food_kg_names.csv'))
     ingredients = ingredients_file.select(pl.col('ingredient_food_kg_names').str.replace('"', ''))['ingredient_food_kg_names'].to_list()
 else:
-    valid_answers_filepath = os.path.join(script_filepath, 'accepted_mturk_df_with_fixed_collisions_valid.csv')
-    test_answers_filepath = os.path.join(script_filepath, 'accepted_mturk_df_with_fixed_collisions_test.csv')
-    valid_answers_df = pl.read_csv(valid_answers_filepath, separator='\t')
-    test_answers_df = pl.read_csv(test_answers_filepath, separator='\t')
+    valid_answers_filepath = os.path.join(script_filepath, f"{os.path.splitext(args.truth_labels_file)[0]}_valid.csv")
+    test_answers_filepath = os.path.join(script_filepath, f"{os.path.splitext(args.truth_labels_file)[0]}_test.csv")
+    if not os.path.exists(valid_answers_filepath) or not os.path.exists(test_answers_filepath):
+        truth_labels_file = os.path.join(script_filepath, args.truth_labels_file)
+        truth_labels_df = pl.read_csv(truth_labels_file, separator='\t')
+        valid_size = int(len(truth_labels_df) * args.validation_split)
+        truth_labels_df = truth_labels_df.sample(fraction=1, shuffle=True)
+        valid_answers_df = truth_labels_df.head(valid_size)
+        test_answers_df = truth_labels_df.tail(len(truth_labels_df) - valid_size)
+        valid_answers_df.write_csv(valid_answers_filepath, separator='\t')
+        test_answers_df.write_csv(test_answers_filepath, separator='\t')
+    else:
+        valid_answers_df = pl.read_csv(valid_answers_filepath, separator='\t')
+        test_answers_df = pl.read_csv(test_answers_filepath, separator='\t')
     ingredients = (
         pl.concat([valid_answers_df, test_answers_df], how='vertical')
         .select(pl.col('ingredient').str.replace('"', ''))['ingredient'].to_list()
@@ -56,14 +69,23 @@ with open(os.path.join(script_filepath, os.pardir, 'json_melted.json'), 'r') as 
     sueatable_db = json.load(f)
     ingredient_tree = ingredient_tree_from_json(sueatable_db)
 
+if args.gpu_id is not None:
+    gpu_kwargs = dict(
+        split_mode=llama_cpp.LLAMA_SPLIT_MODE_NONE,
+        main_gpu=args.gpu_id
+    )
+else:
+    gpu_kwargs = dict()
+
 llm = llama_cpp.Llama(
     args.gguf_path,
     n_gpu_layers=-1,
     n_ctx=args.context_len,
-    echo=False,
+    echo=True,
     compute_log_probs=True,
     verbose=args.verbose,
-    flash_attn=True
+    flash_attn=True,
+    **gpu_kwargs
 )
 gen_params = dict(
     temperature=args.temperature,
@@ -81,6 +103,10 @@ if os.path.exists(output_file):
     labeled_ingredients_df = pl.read_csv(output_file, separator='\t')
     start_index = labeled_ingredients_df.select(pl.max('index')).item() + 1
     labeled_ingredients = list(map(tuple, labeled_ingredients_df.to_numpy()))
+
+    if args.use_all_ingredients:
+        for i, ingr, _ in labeled_ingredients:
+            ingredients.remove(ingr)
 else:
     labeled_ingredients = []
     start_index = 0
