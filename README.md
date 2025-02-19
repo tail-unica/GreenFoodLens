@@ -8,12 +8,14 @@ The generated data and input data for Recbole are available on Zenodo at [![DOI]
 
 [evaluate_llm_labeling.py](src/evaluate_llm_labeling.py) is the script that evaluates the generated labels by computing the accuracy of the labels for exact matches and at different levels of granularity of the taxonomy.
 
-[json_melted.json](src/json_melted.json) is our revision of the food taxonomy that we used to generate the labels. It is loaded to build the taxonomy for the LLM labeling process to decide which labels are correct candidates at the corresponding level of the hierarchy.
+[json_melted.json](json_melted.json) is our revision of the food taxonomy that we used to generate the labels. It is loaded to build the taxonomy for the LLM labeling process to decide which labels are correct candidates at the corresponding level of the hierarchy.
 
 [semantic_matching_eda.py](src/semantic_matching_eda.py) is the script that reproduces the paper proposing HeaSe to find semantic matches between HUMMUS recipe ingredients and the food taxonomy items (tree leaves).
 
 [labeling_analysis.ipynb](src/labeling_analysis.ipynb) is the notebook that reproduces the analysis of the generated labels.
 
-[test_model_sustainability.py](src/test_model_sustainability.py) is the script that reproduces the analysis of the recommender systems's performance on the test set by computing the CF and WF per serving size, retrieving the top-k recommendations, and explored the models' performance relationship with the CF and WF.
+[test_model_sustainability.py](test_model_sustainability.py) is the script that reproduces the analysis of the recommender systems's performance on the test set by computing the CF and WF per serving size, retrieving the top-k recommendations, and explored the models' performance relationship with the CF and WF.
 
-[experiment_config.yaml](src/experiment_config.yaml) is the configuration file for the recommender systems' training and evaluation (Novelty was added by us by extending the metrics script in the Recbole framework).
+[experiment_config.yaml](experiment_config.yaml) is the configuration file for the recommender systems' training and evaluation (Novelty was added by us by extending the metrics script in the Recbole framework).
+
+[revised_su_eatable_life.pdf](revised_su_eatable_life.pdf) is the revised food taxonomy in PDF for easier reading.
