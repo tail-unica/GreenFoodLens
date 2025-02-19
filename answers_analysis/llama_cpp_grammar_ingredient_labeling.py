@@ -101,17 +101,14 @@ if version_id > 1:
 
 if os.path.exists(output_file):
     labeled_ingredients_df = pl.read_csv(output_file, separator='\t')
-    start_index = labeled_ingredients_df.select(pl.max('index')).item() + 1
     labeled_ingredients = list(map(tuple, labeled_ingredients_df.to_numpy()))
 
-    if args.use_all_ingredients:
-        for i, ingr, _ in labeled_ingredients:
-            ingredients.remove(ingr)
+    for i, ingr, _ in labeled_ingredients:
+        ingredients.remove(ingr)
 else:
     labeled_ingredients = []
-    start_index = 0
 
-for i in tqdm.tqdm(range(start_index, len(ingredients)), desc="Ingredients Labeling"):
+for i in tqdm.tqdm(range(len(ingredients)), desc="Ingredients Labeling"):
     ingr = ingredients[i]
     start_time = time.time()
 
