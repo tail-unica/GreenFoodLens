@@ -1,0 +1,3350 @@
+[
+  {
+    "": 0,
+    "level": 0,
+    "label": "AGRICULTURAL PROCESSED",
+    "parent": "-"
+  },
+  {
+    "": 1,
+    "level": 0,
+    "label": "ANIMAL DERIVED",
+    "parent": "-"
+  },
+  {
+    "": 2,
+    "level": 0,
+    "label": "MEAT PRODUCTS",
+    "parent": "-"
+  },
+  {
+    "": 3,
+    "level": 0,
+    "label": "CROPS",
+    "parent": "-"
+  },
+  {
+    "": 4,
+    "level": 0,
+    "label": "FISHING",
+    "parent": "-"
+  },
+  {
+    "": 5,
+    "level": 1,
+    "label": "NUTS COVERED WITH CHOCOLATE",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 6,
+    "level": 1,
+    "label": "VEGETAL PRODUCTS (GENERIC)",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 7,
+    "level": 1,
+    "label": "NUTS PASTE",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 8,
+    "level": 1,
+    "label": "FRUIT JUICE",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 9,
+    "level": 1,
+    "label": "PROCESSED LEGUMES (GENERIC)",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 10,
+    "level": 1,
+    "label": "BREAKFAST CEREALS",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 11,
+    "level": 1,
+    "label": "BEER",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 12,
+    "level": 1,
+    "label": "SUGAR",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 13,
+    "level": 1,
+    "label": "BREAD (GENERIC)",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 14,
+    "level": 1,
+    "label": "GRAIN FLOUR",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 15,
+    "level": 1,
+    "label": "SWEETS",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 16,
+    "level": 1,
+    "label": "VEGETABLES FROZEN",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 17,
+    "level": 1,
+    "label": "VEGETABLES CANNED",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 18,
+    "level": 1,
+    "label": "ICE CREAM",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 19,
+    "level": 1,
+    "label": "BISCUITS",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 20,
+    "level": 1,
+    "label": "COCOA DERIVATES",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 21,
+    "level": 1,
+    "label": "OIL",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 22,
+    "level": 1,
+    "label": "PROCESSED COFFEE (GENERIC)",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 23,
+    "level": 1,
+    "label": "CRISPBREAD**",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 24,
+    "level": 1,
+    "label": "CHOCOLATE",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 25,
+    "level": 1,
+    "label": "STARCHY TUBER",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 26,
+    "level": 1,
+    "label": "PASTA (GENERIC)",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 27,
+    "level": 1,
+    "label": "COFFEE LIQUID",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 28,
+    "level": 1,
+    "label": "CRACKERS",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 29,
+    "level": 1,
+    "label": "DRESSING",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 30,
+    "level": 1,
+    "label": "PROCESSED GRAINS (grouts, malt)",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 31,
+    "level": 1,
+    "label": "MARGARINE*",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 32,
+    "level": 1,
+    "label": "BOTTLED WATER* (mineral water)",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 33,
+    "level": 1,
+    "label": "PESTO",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 34,
+    "level": 1,
+    "label": "FRUIT FROZEN* (raspberry)",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 35,
+    "level": 1,
+    "label": "VEGETAL CREAM* (soy cream)",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 36,
+    "level": 1,
+    "label": "TOMATO SAUCE",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 37,
+    "level": 1,
+    "label": "TOMATO PUREE,PEELED, CHOPPED",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 38,
+    "level": 1,
+    "label": "WINE",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 39,
+    "level": 1,
+    "label": "YEAST (GENERIC)",
+    "parent": "AGRICULTURAL PROCESSED"
+  },
+  {
+    "": 40,
+    "level": 1,
+    "label": "CHEESE (GENERIC)",
+    "parent": "ANIMAL DERIVED"
+  },
+  {
+    "": 41,
+    "level": 1,
+    "label": "PORK MEAT",
+    "parent": "MEAT PRODUCTS"
+  },
+  {
+    "": 42,
+    "level": 1,
+    "label": "BEEF MEAT",
+    "parent": "MEAT PRODUCTS"
+  },
+  {
+    "": 43,
+    "level": 1,
+    "label": "BUFFALO BONE FREE MEAT*",
+    "parent": "MEAT PRODUCTS"
+  },
+  {
+    "": 44,
+    "level": 1,
+    "label": "MILK",
+    "parent": "ANIMAL DERIVED"
+  },
+  {
+    "": 45,
+    "level": 1,
+    "label": "BUTTER*",
+    "parent": "ANIMAL DERIVED"
+  },
+  {
+    "": 46,
+    "level": 1,
+    "label": "POULTRY MEAT",
+    "parent": "MEAT PRODUCTS"
+  },
+  {
+    "": 47,
+    "level": 1,
+    "label": "EGGS & DERIVATES",
+    "parent": "ANIMAL DERIVED"
+  },
+  {
+    "": 48,
+    "level": 1,
+    "label": "EGGS*",
+    "parent": "ANIMAL DERIVED"
+  },
+  {
+    "": 49,
+    "level": 1,
+    "label": "HONEY*",
+    "parent": "ANIMAL DERIVED"
+  },
+  {
+    "": 50,
+    "level": 1,
+    "label": "KANGAROO MEAT*",
+    "parent": "MEAT PRODUCTS"
+  },
+  {
+    "": 51,
+    "level": 1,
+    "label": "LAMB MEAT",
+    "parent": "MEAT PRODUCTS"
+  },
+  {
+    "": 52,
+    "level": 1,
+    "label": "EDIBLE INSECTS* (mealworms)",
+    "parent": "ANIMAL DERIVED"
+  },
+  {
+    "": 53,
+    "level": 1,
+    "label": "RABBIT MEAT WITH BONE*",
+    "parent": "MEAT PRODUCTS"
+  },
+  {
+    "": 54,
+    "level": 1,
+    "label": "SNAILS*",
+    "parent": "ANIMAL DERIVED"
+  },
+  {
+    "": 55,
+    "level": 1,
+    "label": "YOGURT",
+    "parent": "ANIMAL DERIVED"
+  },
+  {
+    "": 56,
+    "level": 1,
+    "label": "NUTS (GENERIC)",
+    "parent": "CROPS"
+  },
+  {
+    "": 57,
+    "level": 1,
+    "label": "SPICIES",
+    "parent": "CROPS"
+  },
+  {
+    "": 58,
+    "level": 1,
+    "label": "FRUIT (GENERIC)",
+    "parent": "CROPS"
+  },
+  {
+    "": 59,
+    "level": 1,
+    "label": "VEGETABLES (GENERIC)",
+    "parent": "CROPS"
+  },
+  {
+    "": 60,
+    "level": 1,
+    "label": "GRAINS",
+    "parent": "CROPS"
+  },
+  {
+    "": 61,
+    "level": 1,
+    "label": "LEGUMES (GENERIC)",
+    "parent": "CROPS"
+  },
+  {
+    "": 62,
+    "level": 1,
+    "label": "SEEDS",
+    "parent": "CROPS"
+  },
+  {
+    "": 63,
+    "level": 1,
+    "label": "COFFEE (GREEN)",
+    "parent": "CROPS"
+  },
+  {
+    "": 64,
+    "level": 1,
+    "label": "COFFEE GREEN*",
+    "parent": "CROPS"
+  },
+  {
+    "": 65,
+    "level": 1,
+    "label": "STARCHY TUBERS",
+    "parent": "CROPS"
+  },
+  {
+    "": 66,
+    "level": 1,
+    "label": "MUSHROOM*",
+    "parent": "CROPS"
+  },
+  {
+    "": 67,
+    "level": 1,
+    "label": "RICE*",
+    "parent": "CROPS"
+  },
+  {
+    "": 68,
+    "level": 1,
+    "label": "FISH",
+    "parent": "FISHING"
+  },
+  {
+    "": 69,
+    "level": 1,
+    "label": "SHELLFISH",
+    "parent": "FISHING"
+  },
+  {
+    "": 70,
+    "level": 1,
+    "label": "FISH FROZEN",
+    "parent": "FISHING"
+  },
+  {
+    "": 71,
+    "level": 1,
+    "label": "FISH PROCESSED",
+    "parent": "FISHING"
+  },
+  {
+    "": 72,
+    "level": 1,
+    "label": "SHELLFISH* (crustacean)",
+    "parent": "FISHING"
+  },
+  {
+    "": 73,
+    "level": 1,
+    "label": "SHELLFISH FROZEN",
+    "parent": "FISHING"
+  },
+  {
+    "": 74,
+    "level": 2,
+    "label": "ALMOND COVERED WITH CHOCOLATE",
+    "parent": "NUTS COVERED WITH CHOCOLATE"
+  },
+  {
+    "": 75,
+    "level": 2,
+    "label": "VEGETAL MILK",
+    "parent": "VEGETAL PRODUCTS (GENERIC)"
+  },
+  {
+    "": 76,
+    "level": 2,
+    "label": "ALMOND PASTE",
+    "parent": "NUTS PASTE"
+  },
+  {
+    "": 77,
+    "level": 2,
+    "label": "APPLE JUICE (I)",
+    "parent": "FRUIT JUICE"
+  },
+  {
+    "": 78,
+    "level": 2,
+    "label": "LEGUME FLOUR",
+    "parent": "PROCESSED LEGUMES (GENERIC)"
+  },
+  {
+    "": 79,
+    "level": 2,
+    "label": "BARLEY FLAKES",
+    "parent": "BREAKFAST CEREALS"
+  },
+  {
+    "": 80,
+    "level": 2,
+    "label": "LEGUMES FROZEN",
+    "parent": "PROCESSED LEGUMES (GENERIC)"
+  },
+  {
+    "": 81,
+    "level": 2,
+    "label": "LEGUMES CANNED",
+    "parent": "PROCESSED LEGUMES (GENERIC)"
+  },
+  {
+    "": 82,
+    "level": 2,
+    "label": "BEER IN CAN",
+    "parent": "BEER"
+  },
+  {
+    "": 83,
+    "level": 2,
+    "label": "BEER IN GLASS",
+    "parent": "BEER"
+  },
+  {
+    "": 84,
+    "level": 2,
+    "label": "BEER MODULAR CAN",
+    "parent": "BEER"
+  },
+  {
+    "": 85,
+    "level": 2,
+    "label": "BEER (OTHER)",
+    "parent": "BEER"
+  },
+  {
+    "": 86,
+    "level": 2,
+    "label": "BEET SUGAR",
+    "parent": "SUGAR"
+  },
+  {
+    "": 87,
+    "level": 2,
+    "label": "BLUEBERRY JUICE (I)",
+    "parent": "FRUIT JUICE"
+  },
+  {
+    "": 88,
+    "level": 2,
+    "label": "BREAD",
+    "parent": "BREAD (GENERIC)"
+  },
+  {
+    "": 89,
+    "level": 2,
+    "label": "BREAD FROZEN* (rolls frozen)",
+    "parent": "BREAD (GENERIC)"
+  },
+  {
+    "": 90,
+    "level": 2,
+    "label": "BUCKWHEAT FLOUR",
+    "parent": "GRAIN FLOUR"
+  },
+  {
+    "": 91,
+    "level": 2,
+    "label": "CAKES AND CROISSANT**",
+    "parent": "SWEETS"
+  },
+  {
+    "": 92,
+    "level": 2,
+    "label": "CANE MOLASSE",
+    "parent": "SUGAR"
+  },
+  {
+    "": 93,
+    "level": 2,
+    "label": "CANE SUGAR",
+    "parent": "SUGAR"
+  },
+  {
+    "": 94,
+    "level": 2,
+    "label": "CARROTS (F)",
+    "parent": "VEGETABLES FROZEN"
+  },
+  {
+    "": 95,
+    "level": 2,
+    "label": "CARROTS CANNED",
+    "parent": "VEGETABLES CANNED"
+  },
+  {
+    "": 96,
+    "level": 2,
+    "label": "CHOCOLATE ICE CREAM",
+    "parent": "ICE CREAM"
+  },
+  {
+    "": 97,
+    "level": 2,
+    "label": "CHOCOLATE OR CREAM FILLED COOKIES**",
+    "parent": "BISCUITS"
+  },
+  {
+    "": 98,
+    "level": 2,
+    "label": "COCOA BUTTER",
+    "parent": "COCOA DERIVATES"
+  },
+  {
+    "": 99,
+    "level": 2,
+    "label": "COCOA CAKES AND CROISSANT**",
+    "parent": "SWEETS"
+  },
+  {
+    "": 100,
+    "level": 2,
+    "label": "COCOA PASTE",
+    "parent": "COCOA DERIVATES"
+  },
+  {
+    "": 101,
+    "level": 2,
+    "label": "COCOA POWDER",
+    "parent": "COCOA DERIVATES"
+  },
+  {
+    "": 102,
+    "level": 2,
+    "label": "COCONUT OIL",
+    "parent": "OIL"
+  },
+  {
+    "": 103,
+    "level": 2,
+    "label": "COFFEE GROUND & PARCHMENT",
+    "parent": "PROCESSED COFFEE (GENERIC)"
+  },
+  {
+    "": 104,
+    "level": 2,
+    "label": "COFFEE GROUND & PARCHMENT* (coffee roasted)",
+    "parent": "PROCESSED COFFEE (GENERIC)"
+  },
+  {
+    "": 105,
+    "level": 2,
+    "label": "CORN CANNED",
+    "parent": "VEGETABLES CANNED"
+  },
+  {
+    "": 106,
+    "level": 2,
+    "label": "CORNFLAKES*",
+    "parent": "BREAKFAST CEREALS"
+  },
+  {
+    "": 107,
+    "level": 2,
+    "label": "CRANBERRY JUICE (I)",
+    "parent": "FRUIT JUICE"
+  },
+  {
+    "": 108,
+    "level": 2,
+    "label": "DARK CHOCOLATE",
+    "parent": "CHOCOLATE"
+  },
+  {
+    "": 109,
+    "level": 2,
+    "label": "DRIED CASSAVA",
+    "parent": "STARCHY TUBER"
+  },
+  {
+    "": 110,
+    "level": 2,
+    "label": "DURUM WHEAT",
+    "parent": "GRAIN FLOUR"
+  },
+  {
+    "": 111,
+    "level": 2,
+    "label": "EGG PASTA*",
+    "parent": "PASTA (GENERIC)"
+  },
+  {
+    "": 112,
+    "level": 2,
+    "label": "ESPRESSO (L)",
+    "parent": "COFFEE LIQUID"
+  },
+  {
+    "": 113,
+    "level": 2,
+    "label": "FIG JUICE (I)",
+    "parent": "FRUIT JUICE"
+  },
+  {
+    "": 114,
+    "level": 2,
+    "label": "FLAVORED CRACKERS**",
+    "parent": "CRACKERS"
+  },
+  {
+    "": 115,
+    "level": 2,
+    "label": "FRUCTOSE",
+    "parent": "SUGAR"
+  },
+  {
+    "": 116,
+    "level": 2,
+    "label": "GRAHAM FLOUR",
+    "parent": "GRAIN FLOUR"
+  },
+  {
+    "": 117,
+    "level": 2,
+    "label": "GRAPEFRUIT JUICE",
+    "parent": "FRUIT JUICE"
+  },
+  {
+    "": 118,
+    "level": 2,
+    "label": "HAZELNUT COVERED WITH CHOCOLATE",
+    "parent": "NUTS COVERED WITH CHOCOLATE"
+  },
+  {
+    "": 119,
+    "level": 2,
+    "label": "HAZELNUT CREAM",
+    "parent": "NUTS PASTE"
+  },
+  {
+    "": 120,
+    "level": 2,
+    "label": "HAZELNUT PASTE",
+    "parent": "NUTS PASTE"
+  },
+  {
+    "": 121,
+    "level": 2,
+    "label": "ICE CREAM (OTHER)",
+    "parent": "ICE CREAM"
+  },
+  {
+    "": 122,
+    "level": 2,
+    "label": "KETCHUP",
+    "parent": "DRESSING"
+  },
+  {
+    "": 123,
+    "level": 2,
+    "label": "KIWI JUICE (I)",
+    "parent": "FRUIT JUICE"
+  },
+  {
+    "": 124,
+    "level": 2,
+    "label": "LINSEED OIL",
+    "parent": "OIL"
+  },
+  {
+    "": 125,
+    "level": 2,
+    "label": "MAIZE FLOUR",
+    "parent": "GRAIN FLOUR"
+  },
+  {
+    "": 126,
+    "level": 2,
+    "label": "MAIZE FLOUR & MEAL",
+    "parent": "GRAIN FLOUR"
+  },
+  {
+    "": 127,
+    "level": 2,
+    "label": "MAIZE GROATS",
+    "parent": "PROCESSED GRAINS (grouts, malt)"
+  },
+  {
+    "": 128,
+    "level": 2,
+    "label": "MAIZE HULLED, PEARLED, SLICED OR KIBBLED",
+    "parent": "PROCESSED GRAINS (grouts, malt)"
+  },
+  {
+    "": 129,
+    "level": 2,
+    "label": "MAIZE OIL",
+    "parent": "OIL"
+  },
+  {
+    "": 130,
+    "level": 2,
+    "label": "MALT",
+    "parent": "PROCESSED GRAINS (grouts, malt)"
+  },
+  {
+    "": 131,
+    "level": 2,
+    "label": "MALT, ROASTED",
+    "parent": "PROCESSED GRAINS (grouts, malt)"
+  },
+  {
+    "": 132,
+    "level": 2,
+    "label": "MANGO JUICE (I)",
+    "parent": "FRUIT JUICE"
+  },
+  {
+    "": 133,
+    "level": 2,
+    "label": "MAYONNAISE",
+    "parent": "DRESSING"
+  },
+  {
+    "": 134,
+    "level": 2,
+    "label": "MILK CHOCOLATE",
+    "parent": "CHOCOLATE"
+  },
+  {
+    "": 135,
+    "level": 2,
+    "label": "MILLET FLOUR",
+    "parent": "GRAIN FLOUR"
+  },
+  {
+    "": 136,
+    "level": 2,
+    "label": "MINERAL WATER*",
+    "parent": "BOTTLED WATER* (mineral water)"
+  },
+  {
+    "": 137,
+    "level": 2,
+    "label": "MIXED VEGETABLES (F)",
+    "parent": "VEGETABLES FROZEN"
+  },
+  {
+    "": 138,
+    "level": 2,
+    "label": "OAT FLAKES",
+    "parent": "BREAKFAST CEREALS"
+  },
+  {
+    "": 139,
+    "level": 2,
+    "label": "OAT GROATS",
+    "parent": "PROCESSED GRAINS (grouts, malt)"
+  },
+  {
+    "": 140,
+    "level": 2,
+    "label": "OAT MEAL",
+    "parent": "GRAIN FLOUR"
+  },
+  {
+    "": 141,
+    "level": 2,
+    "label": "OLIVE OIL",
+    "parent": "OIL"
+  },
+  {
+    "": 142,
+    "level": 2,
+    "label": "OLIVE OIL REFINED",
+    "parent": "OIL"
+  },
+  {
+    "": 143,
+    "level": 2,
+    "label": "ORANGE JUICE",
+    "parent": "FRUIT JUICE"
+  },
+  {
+    "": 144,
+    "level": 2,
+    "label": "PALM OIL",
+    "parent": "OIL"
+  },
+  {
+    "": 145,
+    "level": 2,
+    "label": "PASTA*",
+    "parent": "PASTA (GENERIC)"
+  },
+  {
+    "": 146,
+    "level": 2,
+    "label": "PEANUT BUTTER",
+    "parent": "NUTS PASTE"
+  },
+  {
+    "": 147,
+    "level": 2,
+    "label": "PEANUT OIL",
+    "parent": "OIL"
+  },
+  {
+    "": 148,
+    "level": 2,
+    "label": "PEANUT PASTE",
+    "parent": "NUTS PASTE"
+  },
+  {
+    "": 149,
+    "level": 2,
+    "label": "PEAR JUICE",
+    "parent": "FRUIT JUICE"
+  },
+  {
+    "": 150,
+    "level": 2,
+    "label": "PEAS (F)",
+    "parent": "VEGETABLES FROZEN"
+  },
+  {
+    "": 151,
+    "level": 2,
+    "label": "PESTO WITHOUT GARLIC",
+    "parent": "PESTO"
+  },
+  {
+    "": 152,
+    "level": 2,
+    "label": "PINEAPPLE JUICE (I)",
+    "parent": "FRUIT JUICE"
+  },
+  {
+    "": 153,
+    "level": 2,
+    "label": "PLAIN CRACKERS**",
+    "parent": "CRACKERS"
+  },
+  {
+    "": 154,
+    "level": 2,
+    "label": "POTATO FLAKES",
+    "parent": "STARCHY TUBER"
+  },
+  {
+    "": 155,
+    "level": 2,
+    "label": "POTATOES (F)",
+    "parent": "VEGETABLES FROZEN"
+  },
+  {
+    "": 156,
+    "level": 2,
+    "label": "VEGETAL PROTEINS",
+    "parent": "VEGETAL PRODUCTS (GENERIC)"
+  },
+  {
+    "": 157,
+    "level": 2,
+    "label": "RAPESEED OIL",
+    "parent": "OIL"
+  },
+  {
+    "": 158,
+    "level": 2,
+    "label": "RASPBERRIES (F)*",
+    "parent": "FRUIT FROZEN* (raspberry)"
+  },
+  {
+    "": 159,
+    "level": 2,
+    "label": "RICE FLOUR & MEAL",
+    "parent": "GRAIN FLOUR"
+  },
+  {
+    "": 160,
+    "level": 2,
+    "label": "RICE GROATS",
+    "parent": "PROCESSED GRAINS (grouts, malt)"
+  },
+  {
+    "": 161,
+    "level": 2,
+    "label": "RYE FLOUR",
+    "parent": "GRAIN FLOUR"
+  },
+  {
+    "": 162,
+    "level": 2,
+    "label": "SESAM OIL",
+    "parent": "OIL"
+  },
+  {
+    "": 163,
+    "level": 2,
+    "label": "SIMPLE COOKIES**",
+    "parent": "BISCUITS"
+  },
+  {
+    "": 164,
+    "level": 2,
+    "label": "SORGHUM FLOUR",
+    "parent": "GRAIN FLOUR"
+  },
+  {
+    "": 165,
+    "level": 2,
+    "label": "SOY CREAM*",
+    "parent": "VEGETAL CREAM* (soy cream)"
+  },
+  {
+    "": 166,
+    "level": 2,
+    "label": "SOY PASTE",
+    "parent": "DRESSING"
+  },
+  {
+    "": 167,
+    "level": 2,
+    "label": "SOY SAUCE",
+    "parent": "DRESSING"
+  },
+  {
+    "": 168,
+    "level": 2,
+    "label": "VEGETAL YOGURT (soy yogurt)",
+    "parent": "VEGETAL PRODUCTS (GENERIC)"
+  },
+  {
+    "": 169,
+    "level": 2,
+    "label": "SOYBEAN OIL",
+    "parent": "OIL"
+  },
+  {
+    "": 170,
+    "level": 2,
+    "label": "SPINACH (F)",
+    "parent": "VEGETABLES FROZEN"
+  },
+  {
+    "": 171,
+    "level": 2,
+    "label": "STRAWBERRY JUICE (I)",
+    "parent": "FRUIT JUICE"
+  },
+  {
+    "": 172,
+    "level": 2,
+    "label": "SUNFLOWER OIL",
+    "parent": "OIL"
+  },
+  {
+    "": 173,
+    "level": 2,
+    "label": "SWEET CORN (F)",
+    "parent": "VEGETABLES FROZEN"
+  },
+  {
+    "": 174,
+    "level": 2,
+    "label": "TAPIOCA OF CASSAVA",
+    "parent": "STARCHY TUBER"
+  },
+  {
+    "": 175,
+    "level": 2,
+    "label": "TAPIOCA OF POTATOES",
+    "parent": "STARCHY TUBER"
+  },
+  {
+    "": 176,
+    "level": 2,
+    "label": "TEMPE'",
+    "parent": "DRESSING"
+  },
+  {
+    "": 177,
+    "level": 2,
+    "label": "TOMATO & BASIL",
+    "parent": "TOMATO SAUCE"
+  },
+  {
+    "": 178,
+    "level": 2,
+    "label": "TOMATO ARRABBIATA",
+    "parent": "TOMATO SAUCE"
+  },
+  {
+    "": 179,
+    "level": 2,
+    "label": "TOMATO CHOPPED",
+    "parent": "TOMATO PUREE,PEELED, CHOPPED"
+  },
+  {
+    "": 180,
+    "level": 2,
+    "label": "TOMATO JUICE",
+    "parent": "FRUIT JUICE"
+  },
+  {
+    "": 181,
+    "level": 2,
+    "label": "TOMATO PASTE",
+    "parent": "TOMATO PUREE,PEELED, CHOPPED"
+  },
+  {
+    "": 182,
+    "level": 2,
+    "label": "TOMATO PEELED",
+    "parent": "TOMATO PUREE,PEELED, CHOPPED"
+  },
+  {
+    "": 183,
+    "level": 2,
+    "label": "TOMATO PUREE",
+    "parent": "TOMATO PUREE,PEELED, CHOPPED"
+  },
+  {
+    "": 184,
+    "level": 2,
+    "label": "VANILLA ICE CREAM",
+    "parent": "ICE CREAM"
+  },
+  {
+    "": 185,
+    "level": 2,
+    "label": "WHEAT FLOUR",
+    "parent": "GRAIN FLOUR"
+  },
+  {
+    "": 186,
+    "level": 2,
+    "label": "WHEAT GLUTEN",
+    "parent": "PROCESSED GRAINS (grouts, malt)"
+  },
+  {
+    "": 187,
+    "level": 2,
+    "label": "WHEAT PELLETS",
+    "parent": "PROCESSED GRAINS (grouts, malt)"
+  },
+  {
+    "": 188,
+    "level": 2,
+    "label": "WHEAT PLAIN FLOUR",
+    "parent": "GRAIN FLOUR"
+  },
+  {
+    "": 189,
+    "level": 2,
+    "label": "WHOLE WHEAT FLOUR",
+    "parent": "GRAIN FLOUR"
+  },
+  {
+    "": 190,
+    "level": 2,
+    "label": "WHOLEGRAIN CRACKERS**",
+    "parent": "CRACKERS"
+  },
+  {
+    "": 191,
+    "level": 2,
+    "label": "WINE RED",
+    "parent": "WINE"
+  },
+  {
+    "": 192,
+    "level": 2,
+    "label": "WINE WHITE",
+    "parent": "WINE"
+  },
+  {
+    "": 193,
+    "level": 2,
+    "label": "WINE (OTHER)",
+    "parent": "WINE"
+  },
+  {
+    "": 194,
+    "level": 2,
+    "label": "YEAST COMPRESSED*",
+    "parent": "YEAST (GENERIC)"
+  },
+  {
+    "": 195,
+    "level": 2,
+    "label": "YEAST DRIED*",
+    "parent": "YEAST (GENERIC)"
+  },
+  {
+    "": 196,
+    "level": 2,
+    "label": "YEAST LIQUID*",
+    "parent": "YEAST (GENERIC)"
+  },
+  {
+    "": 197,
+    "level": 2,
+    "label": "ZUCCHINI (F)",
+    "parent": "VEGETABLES FROZEN"
+  },
+  {
+    "": 198,
+    "level": 2,
+    "label": "CHEESE HARD & SEMI-HARD",
+    "parent": "CHEESE (GENERIC)"
+  },
+  {
+    "": 199,
+    "level": 2,
+    "label": "PORK CURED MEAT",
+    "parent": "PORK MEAT"
+  },
+  {
+    "": 200,
+    "level": 2,
+    "label": "BEEF BONE FREE MEAT*",
+    "parent": "BEEF MEAT"
+  },
+  {
+    "": 201,
+    "level": 2,
+    "label": "BEEF MEAT WITH BONE*",
+    "parent": "BEEF MEAT"
+  },
+  {
+    "": 202,
+    "level": 2,
+    "label": "BUFFALO MILK",
+    "parent": "MILK"
+  },
+  {
+    "": 203,
+    "level": 2,
+    "label": "BUTTERED MILK",
+    "parent": "MILK"
+  },
+  {
+    "": 204,
+    "level": 2,
+    "label": "POULTRY BONE FREE MEAT",
+    "parent": "POULTRY MEAT"
+  },
+  {
+    "": 205,
+    "level": 2,
+    "label": "POULTRY MEAT WITH BONE",
+    "parent": "POULTRY MEAT"
+  },
+  {
+    "": 206,
+    "level": 2,
+    "label": "COW MILK",
+    "parent": "MILK"
+  },
+  {
+    "": 207,
+    "level": 2,
+    "label": "CHEESE FRESH",
+    "parent": "CHEESE (GENERIC)"
+  },
+  {
+    "": 208,
+    "level": 2,
+    "label": "EGG YOLKS",
+    "parent": "EGGS & DERIVATES"
+  },
+  {
+    "": 209,
+    "level": 2,
+    "label": "EGGS SHELLED",
+    "parent": "EGGS & DERIVATES"
+  },
+  {
+    "": 210,
+    "level": 2,
+    "label": "PORK MEAT WITH BONE",
+    "parent": "PORK MEAT"
+  },
+  {
+    "": 211,
+    "level": 2,
+    "label": "GOAT MILK",
+    "parent": "MILK"
+  },
+  {
+    "": 212,
+    "level": 2,
+    "label": "KEPHIR",
+    "parent": "MILK"
+  },
+  {
+    "": 213,
+    "level": 2,
+    "label": "LAMB BONE FREE MEAT*",
+    "parent": "LAMB MEAT"
+  },
+  {
+    "": 214,
+    "level": 2,
+    "label": "LAMB MEAT WITH BONE*",
+    "parent": "LAMB MEAT"
+  },
+  {
+    "": 215,
+    "level": 2,
+    "label": "MEALWORMS*",
+    "parent": "EDIBLE INSECTS* (mealworms)"
+  },
+  {
+    "": 216,
+    "level": 2,
+    "label": "MILK ACID",
+    "parent": "MILK"
+  },
+  {
+    "": 217,
+    "level": 2,
+    "label": "MILK CREAMY",
+    "parent": "MILK"
+  },
+  {
+    "": 218,
+    "level": 2,
+    "label": "PORK BONE FREE MEAT*",
+    "parent": "PORK MEAT"
+  },
+  {
+    "": 219,
+    "level": 2,
+    "label": "YOGURT FLAVORED",
+    "parent": "YOGURT"
+  },
+  {
+    "": 220,
+    "level": 2,
+    "label": "YOGURT FLAVOURED**",
+    "parent": "YOGURT"
+  },
+  {
+    "": 221,
+    "level": 2,
+    "label": "YOGURT LACTOSE FREE",
+    "parent": "YOGURT"
+  },
+  {
+    "": 222,
+    "level": 2,
+    "label": "YOGURT WHITE",
+    "parent": "YOGURT"
+  },
+  {
+    "": 223,
+    "level": 2,
+    "label": "YOGURT WHITE LACTOSE FREE",
+    "parent": "YOGURT"
+  },
+  {
+    "": 224,
+    "level": 2,
+    "label": "NUTS",
+    "parent": "NUTS (GENERIC)"
+  },
+  {
+    "": 225,
+    "level": 2,
+    "label": "NUTS SHELLED",
+    "parent": "NUTS (GENERIC)"
+  },
+  {
+    "": 226,
+    "level": 2,
+    "label": "NUTS WITH SHELL",
+    "parent": "NUTS (GENERIC)"
+  },
+  {
+    "": 227,
+    "level": 2,
+    "label": "ANISE",
+    "parent": "SPICIES"
+  },
+  {
+    "": 228,
+    "level": 2,
+    "label": "FRUIT LOCAL",
+    "parent": "FRUIT (GENERIC)"
+  },
+  {
+    "": 229,
+    "level": 2,
+    "label": "DRIED FRUIT",
+    "parent": "FRUIT (GENERIC)"
+  },
+  {
+    "": 230,
+    "level": 2,
+    "label": "VEGETABLES LOCAL",
+    "parent": "VEGETABLES (GENERIC)"
+  },
+  {
+    "": 231,
+    "level": 2,
+    "label": "FRUIT IMPORTED",
+    "parent": "FRUIT (GENERIC)"
+  },
+  {
+    "": 232,
+    "level": 2,
+    "label": "BADIAN",
+    "parent": "SPICIES"
+  },
+  {
+    "": 233,
+    "level": 2,
+    "label": "BARLEY",
+    "parent": "GRAINS"
+  },
+  {
+    "": 234,
+    "level": 2,
+    "label": "LEGUMES",
+    "parent": "LEGUMES (GENERIC)"
+  },
+  {
+    "": 235,
+    "level": 2,
+    "label": "LEGUMES FRESH",
+    "parent": "LEGUMES (GENERIC)"
+  },
+  {
+    "": 236,
+    "level": 2,
+    "label": "BRASSICAS",
+    "parent": "SEEDS"
+  },
+  {
+    "": 237,
+    "level": 2,
+    "label": "CARDAMOM",
+    "parent": "SPICIES"
+  },
+  {
+    "": 238,
+    "level": 2,
+    "label": "CHILLY",
+    "parent": "SPICIES"
+  },
+  {
+    "": 239,
+    "level": 2,
+    "label": "CINNAMON",
+    "parent": "SPICIES"
+  },
+  {
+    "": 240,
+    "level": 2,
+    "label": "CLOVE",
+    "parent": "SPICIES"
+  },
+  {
+    "": 241,
+    "level": 2,
+    "label": "COFFEE BEAN",
+    "parent": "COFFEE (GREEN)"
+  },
+  {
+    "": 242,
+    "level": 2,
+    "label": "CORIANDER",
+    "parent": "SPICIES"
+  },
+  {
+    "": 243,
+    "level": 2,
+    "label": "VEGETABLES HEATED GREENHOUSE",
+    "parent": "VEGETABLES (GENERIC)"
+  },
+  {
+    "": 244,
+    "level": 2,
+    "label": "VEGETABLES NOT HEATED GREENHOUSE",
+    "parent": "VEGETABLES (GENERIC)"
+  },
+  {
+    "": 245,
+    "level": 2,
+    "label": "FRUIT HEATED GREENHOUSE",
+    "parent": "FRUIT (GENERIC)"
+  },
+  {
+    "": 246,
+    "level": 2,
+    "label": "LEGUMES DRIED",
+    "parent": "LEGUMES (GENERIC)"
+  },
+  {
+    "": 247,
+    "level": 2,
+    "label": "FENNEL SEEDS",
+    "parent": "SPICIES"
+  },
+  {
+    "": 248,
+    "level": 2,
+    "label": "GARLIC POWDER",
+    "parent": "SPICIES"
+  },
+  {
+    "": 249,
+    "level": 2,
+    "label": "GINGER",
+    "parent": "SPICIES"
+  },
+  {
+    "": 250,
+    "level": 2,
+    "label": "LEGUMES NOT HEATED GREENHOUSE (green bean)",
+    "parent": "LEGUMES (GENERIC)"
+  },
+  {
+    "": 251,
+    "level": 2,
+    "label": "HEMPSEED",
+    "parent": "SEEDS"
+  },
+  {
+    "": 252,
+    "level": 2,
+    "label": "HOP CONE",
+    "parent": "SPICIES"
+  },
+  {
+    "": 253,
+    "level": 2,
+    "label": "HOP EXTRACT",
+    "parent": "SPICIES"
+  },
+  {
+    "": 254,
+    "level": 2,
+    "label": "LINSEED",
+    "parent": "SEEDS"
+  },
+  {
+    "": 255,
+    "level": 2,
+    "label": "MACE",
+    "parent": "SPICIES"
+  },
+  {
+    "": 256,
+    "level": 2,
+    "label": "MAIZE",
+    "parent": "GRAINS"
+  },
+  {
+    "": 257,
+    "level": 2,
+    "label": "MANIOC",
+    "parent": "STARCHY TUBERS"
+  },
+  {
+    "": 258,
+    "level": 2,
+    "label": "FRUIT NOT HEATED GREENHOUSE* (melon)",
+    "parent": "FRUIT (GENERIC)"
+  },
+  {
+    "": 259,
+    "level": 2,
+    "label": "MILLET",
+    "parent": "GRAINS"
+  },
+  {
+    "": 260,
+    "level": 2,
+    "label": "MUSTARD SEED",
+    "parent": "SEEDS"
+  },
+  {
+    "": 261,
+    "level": 2,
+    "label": "NUTMEG",
+    "parent": "SPICIES"
+  },
+  {
+    "": 262,
+    "level": 2,
+    "label": "OAT",
+    "parent": "GRAINS"
+  },
+  {
+    "": 263,
+    "level": 2,
+    "label": "PEPPER (PIPER SPP.)",
+    "parent": "SPICIES"
+  },
+  {
+    "": 264,
+    "level": 2,
+    "label": "PEPPERMINT",
+    "parent": "SPICIES"
+  },
+  {
+    "": 265,
+    "level": 2,
+    "label": "POPPY SEED",
+    "parent": "SEEDS"
+  },
+  {
+    "": 266,
+    "level": 2,
+    "label": "POTATO",
+    "parent": "STARCHY TUBERS"
+  },
+  {
+    "": 267,
+    "level": 2,
+    "label": "QUINOA",
+    "parent": "GRAINS"
+  },
+  {
+    "": 268,
+    "level": 2,
+    "label": "RAPESEED",
+    "parent": "SEEDS"
+  },
+  {
+    "": 269,
+    "level": 2,
+    "label": "RYE",
+    "parent": "GRAINS"
+  },
+  {
+    "": 270,
+    "level": 2,
+    "label": "SAFFRON",
+    "parent": "SPICIES"
+  },
+  {
+    "": 271,
+    "level": 2,
+    "label": "SESAM SEED",
+    "parent": "SEEDS"
+  },
+  {
+    "": 272,
+    "level": 2,
+    "label": "SORGHUM",
+    "parent": "GRAINS"
+  },
+  {
+    "": 273,
+    "level": 2,
+    "label": "STARCHY ROOTS",
+    "parent": "STARCHY TUBERS"
+  },
+  {
+    "": 274,
+    "level": 2,
+    "label": "SUNFLOWER SEED",
+    "parent": "SEEDS"
+  },
+  {
+    "": 275,
+    "level": 2,
+    "label": "SWEET POTATO",
+    "parent": "STARCHY TUBERS"
+  },
+  {
+    "": 276,
+    "level": 2,
+    "label": "TARO",
+    "parent": "STARCHY TUBERS"
+  },
+  {
+    "": 277,
+    "level": 2,
+    "label": "VANILLA BEAN",
+    "parent": "SPICIES"
+  },
+  {
+    "": 278,
+    "level": 2,
+    "label": "WHEAT",
+    "parent": "GRAINS"
+  },
+  {
+    "": 279,
+    "level": 2,
+    "label": "YAM",
+    "parent": "STARCHY TUBERS"
+  },
+  {
+    "": 280,
+    "level": 2,
+    "label": "ALFONSINO",
+    "parent": "FISH"
+  },
+  {
+    "": 281,
+    "level": 2,
+    "label": "ANCHOVY",
+    "parent": "FISH"
+  },
+  {
+    "": 282,
+    "level": 2,
+    "label": "ANGLERFISH",
+    "parent": "FISH"
+  },
+  {
+    "": 283,
+    "level": 2,
+    "label": "BARNACLE",
+    "parent": "SHELLFISH"
+  },
+  {
+    "": 284,
+    "level": 2,
+    "label": "BLACK CARP",
+    "parent": "FISH"
+  },
+  {
+    "": 285,
+    "level": 2,
+    "label": "CARP",
+    "parent": "FISH"
+  },
+  {
+    "": 286,
+    "level": 2,
+    "label": "CATFISH",
+    "parent": "FISH"
+  },
+  {
+    "": 287,
+    "level": 2,
+    "label": "COD",
+    "parent": "FISH"
+  },
+  {
+    "": 288,
+    "level": 2,
+    "label": "COD (F)",
+    "parent": "FISH FROZEN"
+  },
+  {
+    "": 289,
+    "level": 2,
+    "label": "COD FISH STICK",
+    "parent": "FISH PROCESSED"
+  },
+  {
+    "": 290,
+    "level": 2,
+    "label": "CRUSTACEAN",
+    "parent": "SHELLFISH* (crustacean)"
+  },
+  {
+    "": 291,
+    "level": 2,
+    "label": "CUTTLEFISH",
+    "parent": "SHELLFISH"
+  },
+  {
+    "": 292,
+    "level": 2,
+    "label": "DIAMOND FISH",
+    "parent": "FISH"
+  },
+  {
+    "": 293,
+    "level": 2,
+    "label": "EEL",
+    "parent": "FISH"
+  },
+  {
+    "": 294,
+    "level": 2,
+    "label": "FISH MIXED",
+    "parent": "FISH"
+  },
+  {
+    "": 295,
+    "level": 2,
+    "label": "FISH STICK (F)",
+    "parent": "FISH FROZEN"
+  },
+  {
+    "": 296,
+    "level": 2,
+    "label": "FLATFISH",
+    "parent": "FISH"
+  },
+  {
+    "": 297,
+    "level": 2,
+    "label": "FLATHEAD",
+    "parent": "FISH"
+  },
+  {
+    "": 298,
+    "level": 2,
+    "label": "FLOUNDER",
+    "parent": "FISH"
+  },
+  {
+    "": 299,
+    "level": 2,
+    "label": "FORK BEARD",
+    "parent": "FISH"
+  },
+  {
+    "": 300,
+    "level": 2,
+    "label": "GILSTHEAD SEABREAM",
+    "parent": "FISH"
+  },
+  {
+    "": 301,
+    "level": 2,
+    "label": "GRASS CARP",
+    "parent": "FISH"
+  },
+  {
+    "": 302,
+    "level": 2,
+    "label": "GROUPER",
+    "parent": "FISH"
+  },
+  {
+    "": 303,
+    "level": 2,
+    "label": "HADDOCK",
+    "parent": "FISH"
+  },
+  {
+    "": 304,
+    "level": 2,
+    "label": "HADDOCK (F)",
+    "parent": "FISH FROZEN"
+  },
+  {
+    "": 305,
+    "level": 2,
+    "label": "HAKE",
+    "parent": "FISH"
+  },
+  {
+    "": 306,
+    "level": 2,
+    "label": "HAKE FISH STICK",
+    "parent": "FISH PROCESSED"
+  },
+  {
+    "": 307,
+    "level": 2,
+    "label": "HERRING",
+    "parent": "FISH"
+  },
+  {
+    "": 308,
+    "level": 2,
+    "label": "HERRING (F)",
+    "parent": "FISH FROZEN"
+  },
+  {
+    "": 309,
+    "level": 2,
+    "label": "KRILL",
+    "parent": "SHELLFISH"
+  },
+  {
+    "": 310,
+    "level": 2,
+    "label": "LING",
+    "parent": "FISH"
+  },
+  {
+    "": 311,
+    "level": 2,
+    "label": "LOBSTER",
+    "parent": "SHELLFISH"
+  },
+  {
+    "": 312,
+    "level": 2,
+    "label": "MACKEREL",
+    "parent": "FISH"
+  },
+  {
+    "": 313,
+    "level": 2,
+    "label": "MACKEREL (F)",
+    "parent": "FISH FROZEN"
+  },
+  {
+    "": 314,
+    "level": 2,
+    "label": "MAJOR CARP",
+    "parent": "FISH"
+  },
+  {
+    "": 315,
+    "level": 2,
+    "label": "MAKEREL FISH STICK",
+    "parent": "FISH PROCESSED"
+  },
+  {
+    "": 316,
+    "level": 2,
+    "label": "MANDARIN FISH",
+    "parent": "FISH"
+  },
+  {
+    "": 317,
+    "level": 2,
+    "label": "MEGRIM",
+    "parent": "FISH"
+  },
+  {
+    "": 318,
+    "level": 2,
+    "label": "MILKFISH",
+    "parent": "FISH"
+  },
+  {
+    "": 319,
+    "level": 2,
+    "label": "MIXED FISH (F)",
+    "parent": "FISH FROZEN"
+  },
+  {
+    "": 320,
+    "level": 2,
+    "label": "MUSSELS",
+    "parent": "SHELLFISH"
+  },
+  {
+    "": 321,
+    "level": 2,
+    "label": "OCTOPUS",
+    "parent": "SHELLFISH"
+  },
+  {
+    "": 322,
+    "level": 2,
+    "label": "OCTOPUS (F)",
+    "parent": "SHELLFISH FROZEN"
+  },
+  {
+    "": 323,
+    "level": 2,
+    "label": "PANGASIID",
+    "parent": "FISH"
+  },
+  {
+    "": 324,
+    "level": 2,
+    "label": "PILCHARD",
+    "parent": "FISH"
+  },
+  {
+    "": 325,
+    "level": 2,
+    "label": "PLAICE",
+    "parent": "FISH"
+  },
+  {
+    "": 326,
+    "level": 2,
+    "label": "POLLOCK",
+    "parent": "FISH"
+  },
+  {
+    "": 327,
+    "level": 2,
+    "label": "POLLOCK (F)",
+    "parent": "FISH FROZEN"
+  },
+  {
+    "": 328,
+    "level": 2,
+    "label": "POLLOCK STICK (F)",
+    "parent": "FISH FROZEN"
+  },
+  {
+    "": 329,
+    "level": 2,
+    "label": "POMFRET",
+    "parent": "FISH"
+  },
+  {
+    "": 330,
+    "level": 2,
+    "label": "PORBEAGLE",
+    "parent": "FISH"
+  },
+  {
+    "": 331,
+    "level": 2,
+    "label": "PRAWNS GIANT",
+    "parent": "SHELLFISH* (crustacean)"
+  },
+  {
+    "": 332,
+    "level": 2,
+    "label": "PRAWNS/SHRIMPS",
+    "parent": "SHELLFISH"
+  },
+  {
+    "": 333,
+    "level": 2,
+    "label": "PRAWNS/SHRIMPS (F)",
+    "parent": "SHELLFISH FROZEN"
+  },
+  {
+    "": 334,
+    "level": 2,
+    "label": "RED DRUM",
+    "parent": "FISH"
+  },
+  {
+    "": 335,
+    "level": 2,
+    "label": "RHOMBUS",
+    "parent": "FISH"
+  },
+  {
+    "": 336,
+    "level": 2,
+    "label": "ROCK FISH",
+    "parent": "FISH"
+  },
+  {
+    "": 337,
+    "level": 2,
+    "label": "SALMON",
+    "parent": "FISH"
+  },
+  {
+    "": 338,
+    "level": 2,
+    "label": "SALMON (F)",
+    "parent": "FISH FROZEN"
+  },
+  {
+    "": 339,
+    "level": 2,
+    "label": "SARDINE",
+    "parent": "FISH"
+  },
+  {
+    "": 340,
+    "level": 2,
+    "label": "SEA-BASS",
+    "parent": "FISH"
+  },
+  {
+    "": 341,
+    "level": 2,
+    "label": "SEABASS",
+    "parent": "FISH"
+  },
+  {
+    "": 342,
+    "level": 2,
+    "label": "SHARK",
+    "parent": "FISH"
+  },
+  {
+    "": 343,
+    "level": 2,
+    "label": "SILVERBARB",
+    "parent": "FISH"
+  },
+  {
+    "": 344,
+    "level": 2,
+    "label": "SOLE",
+    "parent": "FISH"
+  },
+  {
+    "": 345,
+    "level": 2,
+    "label": "SOLE (F)",
+    "parent": "FISH FROZEN"
+  },
+  {
+    "": 346,
+    "level": 2,
+    "label": "SQUID",
+    "parent": "SHELLFISH"
+  },
+  {
+    "": 347,
+    "level": 2,
+    "label": "STURGEON",
+    "parent": "FISH"
+  },
+  {
+    "": 348,
+    "level": 2,
+    "label": "SWARDFISH",
+    "parent": "FISH"
+  },
+  {
+    "": 349,
+    "level": 2,
+    "label": "TILAPIA",
+    "parent": "FISH"
+  },
+  {
+    "": 350,
+    "level": 2,
+    "label": "TROUT",
+    "parent": "FISH"
+  },
+  {
+    "": 351,
+    "level": 2,
+    "label": "TROUT (F)",
+    "parent": "FISH FROZEN"
+  },
+  {
+    "": 352,
+    "level": 2,
+    "label": "TUNA",
+    "parent": "FISH"
+  },
+  {
+    "": 353,
+    "level": 2,
+    "label": "TUNA (F)",
+    "parent": "FISH FROZEN"
+  },
+  {
+    "": 354,
+    "level": 2,
+    "label": "TUNA IN CAN",
+    "parent": "FISH PROCESSED"
+  },
+  {
+    "": 355,
+    "level": 2,
+    "label": "TURBOT",
+    "parent": "FISH"
+  },
+  {
+    "": 356,
+    "level": 2,
+    "label": "WHITING",
+    "parent": "FISH"
+  },
+  {
+    "": 357,
+    "level": 2,
+    "label": "WUCHANG BREAM",
+    "parent": "FISH"
+  },
+  {
+    "": 358,
+    "level": 3,
+    "label": "ALMOND MILK",
+    "parent": "VEGETAL MILK"
+  },
+  {
+    "": 359,
+    "level": 3,
+    "label": "AZUKI BEAN FLOUR",
+    "parent": "LEGUME FLOUR"
+  },
+  {
+    "": 360,
+    "level": 3,
+    "label": "BEANS (F)",
+    "parent": "LEGUMES FROZEN"
+  },
+  {
+    "": 361,
+    "level": 3,
+    "label": "BEANS IN CAN",
+    "parent": "LEGUMES CANNED"
+  },
+  {
+    "": 362,
+    "level": 3,
+    "label": "BREAD FROZEN (F)*",
+    "parent": "BREAD FROZEN* (rolls frozen)"
+  },
+  {
+    "": 363,
+    "level": 3,
+    "label": "BREAD MULTICEREAL**",
+    "parent": "BREAD"
+  },
+  {
+    "": 364,
+    "level": 3,
+    "label": "BREAD PLAIN**",
+    "parent": "BREAD"
+  },
+  {
+    "": 365,
+    "level": 3,
+    "label": "BREAD WHOLE**",
+    "parent": "BREAD"
+  },
+  {
+    "": 366,
+    "level": 3,
+    "label": "COCONUT MILK",
+    "parent": "VEGETAL MILK"
+  },
+  {
+    "": 367,
+    "level": 3,
+    "label": "COFFEE DRIP FILTERED (L)",
+    "parent": "COFFEE LIQUID"
+  },
+  {
+    "": 368,
+    "level": 3,
+    "label": "COFFEE GROUND",
+    "parent": "COFFEE GROUND & PARCHMENT"
+  },
+  {
+    "": 369,
+    "level": 3,
+    "label": "COFFEE PARCHMENT",
+    "parent": "COFFEE GROUND & PARCHMENT"
+  },
+  {
+    "": 370,
+    "level": 3,
+    "label": "COFFEE ROASTED",
+    "parent": "COFFEE GROUND & PARCHMENT* (coffee roasted)"
+  },
+  {
+    "": 371,
+    "level": 3,
+    "label": "COFFEE SOLUBLE",
+    "parent": "COFFEE LIQUID"
+  },
+  {
+    "": 372,
+    "level": 3,
+    "label": "COFFEE SOLUBLE POWDER (L)",
+    "parent": "COFFEE LIQUID"
+  },
+  {
+    "": 373,
+    "level": 3,
+    "label": "COFFEE STANDARD",
+    "parent": "COFFEE LIQUID"
+  },
+  {
+    "": 374,
+    "level": 3,
+    "label": "COFFEE STRONG",
+    "parent": "COFFEE LIQUID"
+  },
+  {
+    "": 375,
+    "level": 3,
+    "label": "COFFEE WEAK",
+    "parent": "COFFEE LIQUID"
+  },
+  {
+    "": 376,
+    "level": 3,
+    "label": "GREEN BEANS (F)",
+    "parent": "LEGUMES FROZEN"
+  },
+  {
+    "": 377,
+    "level": 3,
+    "label": "GREEN BEANS IN CAN",
+    "parent": "LEGUMES CANNED"
+  },
+  {
+    "": 378,
+    "level": 3,
+    "label": "MUNG BEAN FLOUR",
+    "parent": "LEGUME FLOUR"
+  },
+  {
+    "": 379,
+    "level": 3,
+    "label": "QUORNE",
+    "parent": "VEGETAL PROTEINS"
+  },
+  {
+    "": 380,
+    "level": 3,
+    "label": "RICE MILK",
+    "parent": "VEGETAL MILK"
+  },
+  {
+    "": 381,
+    "level": 3,
+    "label": "SOY BURGER",
+    "parent": "VEGETAL PROTEINS"
+  },
+  {
+    "": 382,
+    "level": 3,
+    "label": "SOY MEAL",
+    "parent": "LEGUME FLOUR"
+  },
+  {
+    "": 383,
+    "level": 3,
+    "label": "SOY MILK",
+    "parent": "VEGETAL MILK"
+  },
+  {
+    "": 384,
+    "level": 3,
+    "label": "SOY YOGURT*",
+    "parent": "VEGETAL YOGURT (soy yogurt)"
+  },
+  {
+    "": 385,
+    "level": 3,
+    "label": "SOYBEAN FLOUR",
+    "parent": "LEGUME FLOUR"
+  },
+  {
+    "": 386,
+    "level": 3,
+    "label": "TOFU",
+    "parent": "VEGETAL PROTEINS"
+  },
+  {
+    "": 387,
+    "level": 3,
+    "label": "ASIAGO",
+    "parent": "CHEESE HARD & SEMI-HARD"
+  },
+  {
+    "": 388,
+    "level": 3,
+    "label": "BACON",
+    "parent": "PORK CURED MEAT"
+  },
+  {
+    "": 389,
+    "level": 3,
+    "label": "CAMEMBERT",
+    "parent": "CHEESE HARD & SEMI-HARD"
+  },
+  {
+    "": 390,
+    "level": 3,
+    "label": "CEDDAR",
+    "parent": "CHEESE HARD & SEMI-HARD"
+  },
+  {
+    "": 391,
+    "level": 3,
+    "label": "CHEESE (OTHER)",
+    "parent": "CHEESE HARD & SEMI-HARD"
+  },
+  {
+    "": 392,
+    "level": 3,
+    "label": "CHEESE BLUE-VEINED",
+    "parent": "CHEESE HARD & SEMI-HARD"
+  },
+  {
+    "": 393,
+    "level": 3,
+    "label": "CHEESE GRATED",
+    "parent": "CHEESE HARD & SEMI-HARD"
+  },
+  {
+    "": 394,
+    "level": 3,
+    "label": "CHEESE SEMI-HARD (OTHER)",
+    "parent": "CHEESE HARD & SEMI-HARD"
+  },
+  {
+    "": 395,
+    "level": 3,
+    "label": "CHICKEN BONE FREE MEAT",
+    "parent": "POULTRY BONE FREE MEAT"
+  },
+  {
+    "": 396,
+    "level": 3,
+    "label": "CHICKEN MEAT WITH BONE",
+    "parent": "POULTRY MEAT WITH BONE"
+  },
+  {
+    "": 397,
+    "level": 3,
+    "label": "CREAM",
+    "parent": "CHEESE FRESH"
+  },
+  {
+    "": 398,
+    "level": 3,
+    "label": "CURED HAM BONE FREE",
+    "parent": "PORK CURED MEAT"
+  },
+  {
+    "": 399,
+    "level": 3,
+    "label": "CURED HAM WITH BONE",
+    "parent": "PORK CURED MEAT"
+  },
+  {
+    "": 400,
+    "level": 3,
+    "label": "CURED PORK BONE FREE",
+    "parent": "PORK CURED MEAT"
+  },
+  {
+    "": 401,
+    "level": 3,
+    "label": "CURED SHOULDERS WITH BONE",
+    "parent": "PORK CURED MEAT"
+  },
+  {
+    "": 402,
+    "level": 3,
+    "label": "DUCK BONE FREE MEAT",
+    "parent": "POULTRY BONE FREE MEAT"
+  },
+  {
+    "": 403,
+    "level": 3,
+    "label": "DUCK MEAT BONE FREE*",
+    "parent": "POULTRY BONE FREE MEAT"
+  },
+  {
+    "": 404,
+    "level": 3,
+    "label": "DUCK MEAT WITH BONE*",
+    "parent": "POULTRY MEAT WITH BONE"
+  },
+  {
+    "": 405,
+    "level": 3,
+    "label": "EMMENTAL",
+    "parent": "CHEESE HARD & SEMI-HARD"
+  },
+  {
+    "": 406,
+    "level": 3,
+    "label": "EMU BONE FREE MEAT",
+    "parent": "POULTRY BONE FREE MEAT"
+  },
+  {
+    "": 407,
+    "level": 3,
+    "label": "FRESH HAM WITH BONE",
+    "parent": "PORK MEAT WITH BONE"
+  },
+  {
+    "": 408,
+    "level": 3,
+    "label": "FRESH SHOULDERS WITH BONE",
+    "parent": "PORK MEAT WITH BONE"
+  },
+  {
+    "": 409,
+    "level": 3,
+    "label": "GOAT CHEESE",
+    "parent": "CHEESE HARD & SEMI-HARD"
+  },
+  {
+    "": 410,
+    "level": 3,
+    "label": "GOOSE BONE FREE MEAT",
+    "parent": "POULTRY BONE FREE MEAT"
+  },
+  {
+    "": 411,
+    "level": 3,
+    "label": "GRAN MORAVIA",
+    "parent": "CHEESE HARD & SEMI-HARD"
+  },
+  {
+    "": 412,
+    "level": 3,
+    "label": "GRANA PADANO",
+    "parent": "CHEESE HARD & SEMI-HARD"
+  },
+  {
+    "": 413,
+    "level": 3,
+    "label": "GUINEA BONE FREE MEAT",
+    "parent": "POULTRY BONE FREE MEAT"
+  },
+  {
+    "": 414,
+    "level": 3,
+    "label": "MASCARPONE",
+    "parent": "CHEESE FRESH"
+  },
+  {
+    "": 415,
+    "level": 3,
+    "label": "MOZZARELLA",
+    "parent": "CHEESE FRESH"
+  },
+  {
+    "": 416,
+    "level": 3,
+    "label": "NECK",
+    "parent": "PORK CURED MEAT"
+  },
+  {
+    "": 417,
+    "level": 3,
+    "label": "PARMIGIANO REGGIANO",
+    "parent": "CHEESE HARD & SEMI-HARD"
+  },
+  {
+    "": 418,
+    "level": 3,
+    "label": "PECORINO",
+    "parent": "CHEESE HARD & SEMI-HARD"
+  },
+  {
+    "": 419,
+    "level": 3,
+    "label": "PORK CUTS WITH BONE",
+    "parent": "PORK MEAT WITH BONE"
+  },
+  {
+    "": 420,
+    "level": 3,
+    "label": "PORK HAM",
+    "parent": "PORK CURED MEAT"
+  },
+  {
+    "": 421,
+    "level": 3,
+    "label": "PORK MEAT WITH BONE (OTHER)",
+    "parent": "PORK MEAT WITH BONE"
+  },
+  {
+    "": 422,
+    "level": 3,
+    "label": "PORK SAUSAGES",
+    "parent": "PORK CURED MEAT"
+  },
+  {
+    "": 423,
+    "level": 3,
+    "label": "RICOTTA",
+    "parent": "CHEESE FRESH"
+  },
+  {
+    "": 424,
+    "level": 3,
+    "label": "SAUSAGES",
+    "parent": "PORK CURED MEAT"
+  },
+  {
+    "": 425,
+    "level": 3,
+    "label": "STRACCHINO",
+    "parent": "CHEESE FRESH"
+  },
+  {
+    "": 426,
+    "level": 3,
+    "label": "TURKEY BONE FREE MEAT",
+    "parent": "POULTRY BONE FREE MEAT"
+  },
+  {
+    "": 427,
+    "level": 3,
+    "label": "TURKEY MEAT BONE FREE",
+    "parent": "POULTRY BONE FREE MEAT"
+  },
+  {
+    "": 428,
+    "level": 3,
+    "label": "TURKEY MEAT WITH BONE",
+    "parent": "POULTRY MEAT WITH BONE"
+  },
+  {
+    "": 429,
+    "level": 3,
+    "label": "ALMOND",
+    "parent": "NUTS"
+  },
+  {
+    "": 430,
+    "level": 3,
+    "label": "ALMOND SHELLED",
+    "parent": "NUTS SHELLED"
+  },
+  {
+    "": 431,
+    "level": 3,
+    "label": "ALMOND WITH SHELL",
+    "parent": "NUTS WITH SHELL"
+  },
+  {
+    "": 432,
+    "level": 3,
+    "label": "APPLE",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 433,
+    "level": 3,
+    "label": "APPLES",
+    "parent": "DRIED FRUIT"
+  },
+  {
+    "": 434,
+    "level": 3,
+    "label": "APRICOT",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 435,
+    "level": 3,
+    "label": "ARECA NUT",
+    "parent": "NUTS SHELLED"
+  },
+  {
+    "": 436,
+    "level": 3,
+    "label": "ARTICHOKE",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 437,
+    "level": 3,
+    "label": "ASPARAGUS",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 438,
+    "level": 3,
+    "label": "AVOCADO",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 439,
+    "level": 3,
+    "label": "AVOCADO (I)",
+    "parent": "FRUIT IMPORTED"
+  },
+  {
+    "": 440,
+    "level": 3,
+    "label": "BANANA",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 441,
+    "level": 3,
+    "label": "BANANA (I)",
+    "parent": "FRUIT IMPORTED"
+  },
+  {
+    "": 442,
+    "level": 3,
+    "label": "BEAN",
+    "parent": "LEGUMES"
+  },
+  {
+    "": 443,
+    "level": 3,
+    "label": "BEAN (fresh)",
+    "parent": "LEGUMES FRESH"
+  },
+  {
+    "": 444,
+    "level": 3,
+    "label": "BEETROOT",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 445,
+    "level": 3,
+    "label": "BLACKBERRY",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 446,
+    "level": 3,
+    "label": "BLUEBERRY",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 447,
+    "level": 3,
+    "label": "BROCCOLI",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 448,
+    "level": 3,
+    "label": "BRUSSEL SPROUT",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 449,
+    "level": 3,
+    "label": "CABAGGE",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 450,
+    "level": 3,
+    "label": "CAHSEW APPLE",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 451,
+    "level": 3,
+    "label": "CAHSEW NUT",
+    "parent": "NUTS SHELLED"
+  },
+  {
+    "": 452,
+    "level": 3,
+    "label": "CARROB",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 453,
+    "level": 3,
+    "label": "CARROT",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 454,
+    "level": 3,
+    "label": "CASHEW NUT",
+    "parent": "NUTS"
+  },
+  {
+    "": 455,
+    "level": 3,
+    "label": "CAULIFLOWER",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 456,
+    "level": 3,
+    "label": "CELERY",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 457,
+    "level": 3,
+    "label": "CHERRY",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 458,
+    "level": 3,
+    "label": "CHERRY SOUR",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 459,
+    "level": 3,
+    "label": "CHERRY SWEET",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 460,
+    "level": 3,
+    "label": "CHESTNUT",
+    "parent": "NUTS"
+  },
+  {
+    "": 461,
+    "level": 3,
+    "label": "CHICKPEA",
+    "parent": "LEGUMES"
+  },
+  {
+    "": 462,
+    "level": 3,
+    "label": "CHILLY FRESH",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 463,
+    "level": 3,
+    "label": "CITRUS",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 464,
+    "level": 3,
+    "label": "CLEMENTINE",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 465,
+    "level": 3,
+    "label": "COCONUT (I)",
+    "parent": "FRUIT IMPORTED"
+  },
+  {
+    "": 466,
+    "level": 3,
+    "label": "COCONUTS",
+    "parent": "DRIED FRUIT"
+  },
+  {
+    "": 467,
+    "level": 3,
+    "label": "COWPEA",
+    "parent": "LEGUMES"
+  },
+  {
+    "": 468,
+    "level": 3,
+    "label": "CRANBERRY",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 469,
+    "level": 3,
+    "label": "CUCUMBER",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 470,
+    "level": 3,
+    "label": "CUCUMBER (G)",
+    "parent": "VEGETABLES HEATED GREENHOUSE"
+  },
+  {
+    "": 471,
+    "level": 3,
+    "label": "CUCUMBER (g)",
+    "parent": "VEGETABLES NOT HEATED GREENHOUSE"
+  },
+  {
+    "": 472,
+    "level": 3,
+    "label": "CURRANT",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 473,
+    "level": 3,
+    "label": "DATES",
+    "parent": "DRIED FRUIT"
+  },
+  {
+    "": 474,
+    "level": 3,
+    "label": "EGGPLANT",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 475,
+    "level": 3,
+    "label": "EGGPLANT (g)",
+    "parent": "VEGETABLES NOT HEATED GREENHOUSE"
+  },
+  {
+    "": 476,
+    "level": 3,
+    "label": "EXOTIC FRUIT (G)",
+    "parent": "FRUIT HEATED GREENHOUSE"
+  },
+  {
+    "": 477,
+    "level": 3,
+    "label": "EXOTIC FRUIT (I)",
+    "parent": "FRUIT IMPORTED"
+  },
+  {
+    "": 478,
+    "level": 3,
+    "label": "FABA BEAN",
+    "parent": "LEGUMES DRIED"
+  },
+  {
+    "": 479,
+    "level": 3,
+    "label": "FENNEL",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 480,
+    "level": 3,
+    "label": "FIG",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 481,
+    "level": 3,
+    "label": "GARLIC",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 482,
+    "level": 3,
+    "label": "GERKIN",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 483,
+    "level": 3,
+    "label": "GERKIN (G)",
+    "parent": "VEGETABLES HEATED GREENHOUSE"
+  },
+  {
+    "": 484,
+    "level": 3,
+    "label": "GOOSEBERRY",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 485,
+    "level": 3,
+    "label": "GRAPES",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 486,
+    "level": 3,
+    "label": "GREEN BEAN (fresh)",
+    "parent": "LEGUMES"
+  },
+  {
+    "": 487,
+    "level": 3,
+    "label": "GREEN BEAN (fresh) (g)*",
+    "parent": "LEGUMES NOT HEATED GREENHOUSE (green bean)"
+  },
+  {
+    "": 488,
+    "level": 3,
+    "label": "GUAVA",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 489,
+    "level": 3,
+    "label": "HAZELNUT",
+    "parent": "NUTS"
+  },
+  {
+    "": 490,
+    "level": 3,
+    "label": "HAZELNUT SHELLED",
+    "parent": "NUTS SHELLED"
+  },
+  {
+    "": 491,
+    "level": 3,
+    "label": "HAZELNUT WITH SHELL",
+    "parent": "NUTS WITH SHELL"
+  },
+  {
+    "": 492,
+    "level": 3,
+    "label": "KIWI",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 493,
+    "level": 3,
+    "label": "KOLA NUT",
+    "parent": "NUTS SHELLED"
+  },
+  {
+    "": 494,
+    "level": 3,
+    "label": "LEMON",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 495,
+    "level": 3,
+    "label": "LENTIL",
+    "parent": "LEGUMES"
+  },
+  {
+    "": 496,
+    "level": 3,
+    "label": "LETTUCE",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 497,
+    "level": 3,
+    "label": "LETTUCE (G)",
+    "parent": "VEGETABLES HEATED GREENHOUSE"
+  },
+  {
+    "": 498,
+    "level": 3,
+    "label": "LIME",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 499,
+    "level": 3,
+    "label": "LONGABERRY",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 500,
+    "level": 3,
+    "label": "MAIZE GREEN",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 501,
+    "level": 3,
+    "label": "MANDARIN",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 502,
+    "level": 3,
+    "label": "MANGO",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 503,
+    "level": 3,
+    "label": "MANGOSTEEN",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 504,
+    "level": 3,
+    "label": "MELON",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 505,
+    "level": 3,
+    "label": "MELON (g)*",
+    "parent": "FRUIT NOT HEATED GREENHOUSE* (melon)"
+  },
+  {
+    "": 506,
+    "level": 3,
+    "label": "MIXED NUTS",
+    "parent": "NUTS"
+  },
+  {
+    "": 507,
+    "level": 3,
+    "label": "MULBERRY",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 508,
+    "level": 3,
+    "label": "OKRA",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 509,
+    "level": 3,
+    "label": "OLIVES",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 510,
+    "level": 3,
+    "label": "ONION",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 511,
+    "level": 3,
+    "label": "ORANGE",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 512,
+    "level": 3,
+    "label": "PALM NUT",
+    "parent": "NUTS"
+  },
+  {
+    "": 513,
+    "level": 3,
+    "label": "PAPAYA",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 514,
+    "level": 3,
+    "label": "PEA",
+    "parent": "LEGUMES"
+  },
+  {
+    "": 515,
+    "level": 3,
+    "label": "PEA (fresh)",
+    "parent": "LEGUMES FRESH"
+  },
+  {
+    "": 516,
+    "level": 3,
+    "label": "PEACH",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 517,
+    "level": 3,
+    "label": "PEANUT",
+    "parent": "NUTS"
+  },
+  {
+    "": 518,
+    "level": 3,
+    "label": "PEAR",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 519,
+    "level": 3,
+    "label": "PEPPER",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 520,
+    "level": 3,
+    "label": "PEPPER (G)",
+    "parent": "VEGETABLES HEATED GREENHOUSE"
+  },
+  {
+    "": 521,
+    "level": 3,
+    "label": "PEPPER (g)",
+    "parent": "VEGETABLES NOT HEATED GREENHOUSE"
+  },
+  {
+    "": 522,
+    "level": 3,
+    "label": "PIGEON PEA",
+    "parent": "LEGUMES DRIED"
+  },
+  {
+    "": 523,
+    "level": 3,
+    "label": "PINEAPPLE",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 524,
+    "level": 3,
+    "label": "PINEAPPLE (I)",
+    "parent": "FRUIT IMPORTED"
+  },
+  {
+    "": 525,
+    "level": 3,
+    "label": "PISTACHIO",
+    "parent": "NUTS"
+  },
+  {
+    "": 526,
+    "level": 3,
+    "label": "PLANTAIN",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 527,
+    "level": 3,
+    "label": "PLUM",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 528,
+    "level": 3,
+    "label": "POMEGRANATE",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 529,
+    "level": 3,
+    "label": "POMEGRANATE (I)",
+    "parent": "FRUIT IMPORTED"
+  },
+  {
+    "": 530,
+    "level": 3,
+    "label": "POMELO",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 531,
+    "level": 3,
+    "label": "PUMPKIN",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 532,
+    "level": 3,
+    "label": "RADISH",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 533,
+    "level": 3,
+    "label": "RAISINS",
+    "parent": "DRIED FRUIT"
+  },
+  {
+    "": 534,
+    "level": 3,
+    "label": "RASPBERRY",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 535,
+    "level": 3,
+    "label": "RASPBERRY (G)",
+    "parent": "FRUIT HEATED GREENHOUSE"
+  },
+  {
+    "": 536,
+    "level": 3,
+    "label": "ROCKMELON",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 537,
+    "level": 3,
+    "label": "SHALLOT",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 538,
+    "level": 3,
+    "label": "SOYBEAN",
+    "parent": "LEGUMES"
+  },
+  {
+    "": 539,
+    "level": 3,
+    "label": "SPINACH",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 540,
+    "level": 3,
+    "label": "SQUASH",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 541,
+    "level": 3,
+    "label": "STRAWBERRY",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 542,
+    "level": 3,
+    "label": "STRAWBERRY (G)",
+    "parent": "FRUIT HEATED GREENHOUSE"
+  },
+  {
+    "": 543,
+    "level": 3,
+    "label": "STRAWBERRY (I)",
+    "parent": "FRUIT IMPORTED"
+  },
+  {
+    "": 544,
+    "level": 3,
+    "label": "STRING BEAN",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 545,
+    "level": 3,
+    "label": "SWEDE",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 546,
+    "level": 3,
+    "label": "TANGERIN",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 547,
+    "level": 3,
+    "label": "TOMATO",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 548,
+    "level": 3,
+    "label": "TOMATO (G)",
+    "parent": "VEGETABLES HEATED GREENHOUSE"
+  },
+  {
+    "": 549,
+    "level": 3,
+    "label": "TOMATO (g)",
+    "parent": "VEGETABLES NOT HEATED GREENHOUSE"
+  },
+  {
+    "": 550,
+    "level": 3,
+    "label": "TURNIP",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 551,
+    "level": 3,
+    "label": "VEGETABLES (OTHER)",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 552,
+    "level": 3,
+    "label": "WALNUT",
+    "parent": "NUTS"
+  },
+  {
+    "": 553,
+    "level": 3,
+    "label": "WALNUT SHELLED",
+    "parent": "NUTS SHELLED"
+  },
+  {
+    "": 554,
+    "level": 3,
+    "label": "WALNUT WITH SHELL",
+    "parent": "NUTS WITH SHELL"
+  },
+  {
+    "": 555,
+    "level": 3,
+    "label": "WATERMELON",
+    "parent": "FRUIT LOCAL"
+  },
+  {
+    "": 556,
+    "level": 3,
+    "label": "ZUCCHINI",
+    "parent": "VEGETABLES LOCAL"
+  },
+  {
+    "": 557,
+    "level": 3,
+    "label": "ZUCCHINI (g)",
+    "parent": "VEGETABLES NOT HEATED GREENHOUSE"
+  }
+]
