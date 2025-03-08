@@ -2,7 +2,7 @@
 
 This repository contains the material to reproduce the dataset of sustainability labels, the analysis of the generated labels, and the configuration files to run the recommender systems through Recbole.
 
-The generated data and input data for Recbole are available on Zenodo at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14894799.svg)](https://doi.org/10.5281/zenodo.14894798).
+The generated data is available on Zenodo at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14894799.svg)](https://doi.org/10.5281/zenodo.14894798).
 
 [llama_cpp_grammar_ingredient_labeling.py](src/llama_cpp_grammar_ingredient_labeling.py) is the script that runs the LLM to generate the labels by loading the prompts pieces from [prompt_templates_guidance.py](src/prompt_templates_guidance.py) and leveraging constraint generation through Llama-cpp grammars.
 
