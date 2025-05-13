@@ -34,6 +34,7 @@ if __name__ == "__main__":
     if not os.path.exists(topk_cf_wf_dict_filename):
         topk_cf_wf_per_model = {}
         for model_file in args.model_files:
+            print(f"Loading model from {model_file}")
             config, model, dataset, train_data, valid_data, test_data = load_data_and_model(
                 model_file=model_file
             )
@@ -67,11 +68,15 @@ if __name__ == "__main__":
 
                 print(result)
             
+            topk_lists = []
             users = test_data.user_df[test_data.uid_field]
-            _, topk_lists = full_sort_topk(users, model, test_data, 10, device=model.device)
-            topk_lists = topk_lists.cpu()
+            for user_batch in torch.split(users, args.eval_batch_size):
+                _, batch_topk_lists = full_sort_topk(user_batch, model, test_data, 10, device=model.device)
+                topk_lists.append(batch_topk_lists.cpu())
+            
+            topk_lists = torch.cat(topk_lists, dim=0)
 
-            sustainability_df = pl.read_csv('/home/gmedda/projects/PHASEIngredientLabeling/answers_analysis/src/recipes_with_cf_wf.csv', separator='\t')
+            sustainability_df = pl.read_csv('/home/gmedda/projects/PHASEIngredientLabeling/src/recipes_with_cf_wf.csv', separator='\t')
 
             cf_map = torch.full((dataset.item_num,), fill_value=torch.nan, dtype=float)
             for recipe_id, cf in zip(sustainability_df['recipe_id'].cast(pl.String), sustainability_df[sustainability_df_cf_column].to_torch()):
@@ -79,7 +84,6 @@ if __name__ == "__main__":
                     cf_map[dataset.field2token_id[dataset.iid_field][recipe_id]] = cf
 
             wf_map = torch.full((dataset.item_num,), fill_value=torch.nan, dtype=float)
-            breakpoint()
             for recipe_id, wf in zip(sustainability_df['recipe_id'].cast(pl.String), sustainability_df[sustainability_df_wf_column].to_torch()):
                 if recipe_id in dataset.field2token_id[dataset.iid_field]:
                     wf_map[dataset.field2token_id[dataset.iid_field][recipe_id]] = wf

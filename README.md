@@ -2,7 +2,7 @@
 
 This repository contains the material to reproduce the dataset of sustainability labels, the analysis of the generated labels, and the configuration files to run the recommender systems through Recbole.
 
-The generated data is available on Zenodo at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15396544.svg)](https://doi.org/10.5281/zenodo.15396544).
+The generated data is available on Zenodo at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15398477.svg)](https://doi.org/10.5281/zenodo.15398477).
 To streamline users' workflow and avoid further pre-processing, the data includes a file `pp_recipes_with_cf_wf.csv`, which corresponds to the original HUMMUS file `pp_recipes.csv` with the unweighted aggregation of CF and WF at the recipe level.
 
 [llama_cpp_grammar_ingredient_labeling.py](src/llama_cpp_grammar_ingredient_labeling.py) is the script that runs the LLM to generate the labels by loading the prompts pieces from [prompt_templates_guidance.py](src/prompt_templates_guidance.py) and leveraging constraint generation through Llama-cpp grammars.
