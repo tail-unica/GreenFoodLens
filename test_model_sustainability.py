@@ -71,7 +71,7 @@ if __name__ == "__main__":
             _, topk_lists = full_sort_topk(users, model, test_data, 10, device=model.device)
             topk_lists = topk_lists.cpu()
 
-            sustainability_df = pl.read_csv('src/recipes_with_cf_wf.csv', separator='\t')
+            sustainability_df = pl.read_csv('/home/gmedda/projects/PHASEIngredientLabeling/answers_analysis/src/recipes_with_cf_wf.csv', separator='\t')
 
             cf_map = torch.full((dataset.item_num,), fill_value=torch.nan, dtype=float)
             for recipe_id, cf in zip(sustainability_df['recipe_id'].cast(pl.String), sustainability_df[sustainability_df_cf_column].to_torch()):
@@ -79,6 +79,7 @@ if __name__ == "__main__":
                     cf_map[dataset.field2token_id[dataset.iid_field][recipe_id]] = cf
 
             wf_map = torch.full((dataset.item_num,), fill_value=torch.nan, dtype=float)
+            breakpoint()
             for recipe_id, wf in zip(sustainability_df['recipe_id'].cast(pl.String), sustainability_df[sustainability_df_wf_column].to_torch()):
                 if recipe_id in dataset.field2token_id[dataset.iid_field]:
                     wf_map[dataset.field2token_id[dataset.iid_field][recipe_id]] = wf
@@ -122,11 +123,11 @@ if __name__ == "__main__":
     heatmap_wf = np.vstack(heatmap_wf_list)
     annot_size = 10
     title_size = 13
-    cbar_size = 14
-    tick_fontsize = 14
-    xlabel_size = 14
+    cbar_size = 10
+    tick_fontsize = 10
+    xlabel_size = 10
 
-    fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(6, 6))
+    fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(6, 3))
     sns.heatmap(heatmap_cf, ax=ax1, cmap='viridis', annot=True, fmt=".2f", annot_kws={"size": annot_size},
                 yticklabels=models_list, xticklabels=range(1, topk_cf.shape[1] + 1), linewidth=.5)
     # ax1.set_title('CF (Kgs CO$_{2}$eq/g) Avg. Across Top-K Positions', fontsize=title_size)
@@ -141,10 +142,11 @@ if __name__ == "__main__":
     # Configure the WF colorbar to display values in exponential notation
     cb = ax2.collections[0].colorbar
     cb.formatter.set_scientific(True)
-    cb.formatter.set_powerlimits((0, 0))
+    exponent_limit = np.floor(np.log10(cb.vmax)) + 1
+    cb.formatter.set_powerlimits((exponent_limit, exponent_limit))
     cb.update_ticks()
 
-    ax1.collections[0].colorbar.ax.tick_params(labelsize=annot_size)
+    ax1.collections[0].colorbar.ax.tick_params(labelsize=cbar_size)
     cb.ax.tick_params(labelsize=cbar_size)
 
     for ax in (ax1, ax2):
@@ -152,10 +154,10 @@ if __name__ == "__main__":
         plt.setp(ax.get_yticklabels(), fontsize=tick_fontsize)
     
     for t in ax2.texts:
-        t.set_text(f"{float(t.get_text()) / (10 ** np.floor(np.log10(cb.vmax))):.1f}".split('e')[0])
+        t.set_text(f"{float(t.get_text()) / (10 ** exponent_limit):.1f}".split('e')[0])
     
     plt.tight_layout()
-    plt.savefig('src/cf_wf_heatmap.png', 
+    plt.savefig('/home/gmedda/projects/PHASEIngredientLabeling/plots/cf_wf_heatmap.png', 
                 dpi=300, bbox_inches='tight', pad_inches=0)
     plt.close()
 
@@ -172,14 +174,14 @@ if __name__ == "__main__":
     grid.ax_joint.set_ylabel(wf_label)
     plt.tight_layout()
     grid.ax_joint.legend(title='Model', fontsize=10)
-    plt.savefig('src/cf_wf_jointplot_hummus.png', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.savefig('/home/gmedda/projects/PHASEIngredientLabeling/plots/cf_wf_jointplot_hummus.png', dpi=300, bbox_inches='tight', pad_inches=0)
     plt.close()
 
     config, model, dataset, train_data, valid_data, test_data = load_data_and_model(
         model_file=args.model_files[0]
     )
 
-    sustainability_df = pl.read_csv('src/recipes_with_cf_wf.csv', separator='\t')
+    sustainability_df = pl.read_csv('/home/gmedda/projects/PHASEIngredientLabeling/src/recipes_with_cf_wf.csv', separator='\t')
 
     cf_map = torch.full((dataset.item_num,), fill_value=torch.nan, dtype=float)
     for recipe_id, cf in zip(sustainability_df['recipe_id'].cast(pl.String), sustainability_df[sustainability_df_cf_column].to_torch()):
@@ -203,10 +205,10 @@ if __name__ == "__main__":
     test_pos_iids_samples = test_pos_iids_samples[outliers_mask]
     test_pos_iids_hue = ['Test Interactions'] * test_pos_iids_samples.shape[0]
 
-    palette = dict(zip(models_list, sns.color_palette('tab10', n_colors=len(models_list) + 2)[2:]))
+    palette = dict(zip(models_list + ['Test Interactions'], sns.color_palette('tab10', n_colors=len(models_list) + 1)))
 
-    scatter_grid = sns.jointplot(x=test_pos_iids_samples[:, 0], space=.1, y=test_pos_iids_samples[:, 1], hue=test_pos_iids_hue)
-    sns.scatterplot(x=samples[:, 0], y=samples[:, 1], hue=hue, alpha=0.8, ax=scatter_grid.ax_joint, palette=palette)
+    scatter_grid = sns.jointplot(x=test_pos_iids_samples[:, 0], space=.1, y=test_pos_iids_samples[:, 1], hue=test_pos_iids_hue, palette=palette)
+    sns.scatterplot(x=samples[:, 0], y=samples[:, 1], hue=hue, alpha=0.9, ax=scatter_grid.ax_joint, palette=palette)
     sns.kdeplot(x=samples[:, 0], hue=hue, fill=True, ax=scatter_grid.ax_marg_x, legend=False, palette=palette)
     sns.kdeplot(y=samples[:, 1], hue=hue, fill=True, ax=scatter_grid.ax_marg_y, legend=False, palette=palette)
     scatter_grid.ax_joint.set_xlabel(cf_label)
@@ -214,4 +216,4 @@ if __name__ == "__main__":
     scatter_legend = scatter_grid.ax_joint.legend(title='Test Interactions\nand\nModel Recommendations', fontsize=10)
     plt.setp(scatter_legend.get_title(), multialignment='center')
     plt.tight_layout()
-    plt.savefig('src/cf_wf_jointplot_pos_iid_hummus.png', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.savefig('/home/gmedda/projects/PHASEIngredientLabeling/plots/cf_wf_jointplot_pos_iid_hummus.png', dpi=300, bbox_inches='tight', pad_inches=0)

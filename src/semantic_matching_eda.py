@@ -25,7 +25,7 @@ def main():
     script_filepath = os.path.realpath(__file__)
 
     # Load the ingredient tree from JSON
-    json_path = os.path.join(os.path.dirname(script_filepath), os.pardir, 'json_melted.json')
+    json_path = os.path.join(os.path.dirname(script_filepath), os.pardir, 'revised_su-eatable-life_taxonomy.json')
     with open(json_path, 'r') as f:
         sueatable_db = json.load(f)
     ingredient_tree = ingredient_tree_from_json(sueatable_db)

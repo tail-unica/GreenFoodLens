@@ -65,7 +65,7 @@ output_file = os.path.join(
 )
 os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
-with open(os.path.join(script_filepath, os.pardir, 'json_melted.json'), 'r') as f:
+with open(os.path.join(script_filepath, os.pardir, 'revised_su-eatable-life_taxonomy.json'), 'r') as f:
     sueatable_db = json.load(f)
     ingredient_tree = ingredient_tree_from_json(sueatable_db)
 
