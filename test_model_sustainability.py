@@ -16,12 +16,16 @@ from recbole.utils.case_study import full_sort_topk
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Case study example')
-    parser.add_argument('model_files', type=str, nargs='+', help='The path of the model file')
+    parser.add_argument('model_files', type=str, nargs='+', help='The path of the model files pre-trained by RecBole')
+    parser.add_argument('--recipes_with_cf_wf', type=str, default='recipes_with_cf_wf.csv', help='The path to the recipes with CF and WF')
+    parser.add_argument('--plots_path', type=str, default='plots', help='The path to save the plots')
     parser.add_argument('--gpu_id', type=str, default="0", help='The id of gpu')
     parser.add_argument('--eval_batch_size', type=int, default=50_000, help='The batch size of evaluation')
     parser.add_argument('--skip_eval', action='store_true', help='Skip the evaluation')
     parser.add_argument('--CF_WF_per_serving_size', action='store_true', help='Calculate CF and WF per serving size')
     args, _ = parser.parse_known_args()
+
+    os.makedirs(args.plots_path, exist_ok=True)
 
     if args.CF_WF_per_serving_size:
         sustainability_df_cf_column = 'CF_recipe'
@@ -29,6 +33,8 @@ if __name__ == "__main__":
     else:
         sustainability_df_cf_column = 'recipe_CF_kg'
         sustainability_df_wf_column = 'recipe_WF_kg'
+
+    sustainability_df = pl.read_csv(args.recipes_with_cf_wf, separator='\t')
 
     topk_cf_wf_dict_filename = 'topk_cf_wf_per_model.pkl'
     if not os.path.exists(topk_cf_wf_dict_filename):
@@ -75,8 +81,6 @@ if __name__ == "__main__":
                 topk_lists.append(batch_topk_lists.cpu())
             
             topk_lists = torch.cat(topk_lists, dim=0)
-
-            sustainability_df = pl.read_csv('/home/gmedda/projects/PHASEIngredientLabeling/src/recipes_with_cf_wf.csv', separator='\t')
 
             cf_map = torch.full((dataset.item_num,), fill_value=torch.nan, dtype=float)
             for recipe_id, cf in zip(sustainability_df['recipe_id'].cast(pl.String), sustainability_df[sustainability_df_cf_column].to_torch()):
@@ -161,8 +165,7 @@ if __name__ == "__main__":
         t.set_text(f"{float(t.get_text()) / (10 ** exponent_limit):.1f}".split('e')[0])
     
     plt.tight_layout()
-    plt.savefig('/home/gmedda/projects/PHASEIngredientLabeling/plots/cf_wf_heatmap.png', 
-                dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.savefig(os.path.join(args.plots_path, 'cf_wf_heatmap.png'), dpi=300, bbox_inches='tight', pad_inches=0)
     plt.close()
 
     samples = np.vstack(samples)
@@ -178,14 +181,12 @@ if __name__ == "__main__":
     grid.ax_joint.set_ylabel(wf_label)
     plt.tight_layout()
     grid.ax_joint.legend(title='Model', fontsize=10)
-    plt.savefig('/home/gmedda/projects/PHASEIngredientLabeling/plots/cf_wf_jointplot_hummus.png', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.savefig(os.path.join(args.plots_path, 'cf_wf_jointplot_hummus.png'), dpi=300, bbox_inches='tight', pad_inches=0)
     plt.close()
 
     config, model, dataset, train_data, valid_data, test_data = load_data_and_model(
         model_file=args.model_files[0]
     )
-
-    sustainability_df = pl.read_csv('/home/gmedda/projects/PHASEIngredientLabeling/src/recipes_with_cf_wf.csv', separator='\t')
 
     cf_map = torch.full((dataset.item_num,), fill_value=torch.nan, dtype=float)
     for recipe_id, cf in zip(sustainability_df['recipe_id'].cast(pl.String), sustainability_df[sustainability_df_cf_column].to_torch()):
@@ -220,4 +221,4 @@ if __name__ == "__main__":
     scatter_legend = scatter_grid.ax_joint.legend(title='Test Interactions\nand\nModel Recommendations', fontsize=10)
     plt.setp(scatter_legend.get_title(), multialignment='center')
     plt.tight_layout()
-    plt.savefig('/home/gmedda/projects/PHASEIngredientLabeling/plots/cf_wf_jointplot_pos_iid_hummus.png', dpi=300, bbox_inches='tight', pad_inches=0)
+    plt.savefig(os.path.join(args.plots_path, 'cf_wf_jointplot_pos_iid_hummus.png'), dpi=300, bbox_inches='tight', pad_inches=0)
