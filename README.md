@@ -65,6 +65,22 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 uv sync
 ```
 
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**LLM Inference Issues:**
+- **Out of memory errors**: Reduce `--context_len` or use a smaller model
+- **Slow inference**: Ensure GPU support is properly configured for llama-cpp-python
+
+**Missing Files:**
+- Check that all required external files are downloaded and placed in the correct directories
+- Verify file paths in configuration files match your actual file locations
+
+### Performance Tips
+- Use `--eval_batch_size` parameter to balance memory usage and speed
+- Consider using more quantized models (Q4_K_S) for faster inference with minimal quality loss
+
 ## 🚀 Usage Pipeline
 
 Follow these steps to reproduce the complete pipeline from ingredient labeling to sustainability-aware recommendation:
@@ -239,26 +255,26 @@ If you use this code or dataset in your research, please cite our paper:
 ```
 -->
 
+## 📈 Results
+
+### Distribution of HUMMUS ingredients based on sustainability food groups (1st taxonomy level)
+
+![](asset/taxonomy_distribution_pie_chart.png)
+
+### Distribution of ingredients CF and WF values across HUMMUS recipes
+
+![](asset/kde_cf_wf_distributions_legend.png)
+
+![](asset/labeled_ingredients_cf_wf_distributions.png)
+
+### Average CF (on top) and WF (on bottom) values for each top-10 recommendation position
+
+![](asset/cf_wf_heatmap.png)
+
+### CF and WF scatterplot of test interactions (from the test set) and top-10 recommendations (density marginal distributions on the sides)
+
+![](asset/cf_wf_jointplot_pos_iid_hummus.png)
+
 ## 📜 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🔧 Troubleshooting
-
-### Common Issues
-
-**LLM Inference Issues:**
-- **Out of memory errors**: Reduce `--context_len` or use a smaller model
-- **Slow inference**: Ensure GPU support is properly configured for llama-cpp-python
-
-**RecBole Training Issues:**
-- **Module not found errors**: Ensure RecBole is properly installed with `pip install recbole`
-- **Dataset format errors**: Verify that your HUMMUS dataset follows the expected format in `experiment_config.yaml`
-
-**Missing Files:**
-- Check that all required external files are downloaded and placed in the correct directories
-- Verify file paths in configuration files match your actual file locations
-
-### Performance Tips
-- Use `--eval_batch_size` parameter to balance memory usage and speed
-- Consider using more quantized models (Q4_K_S) for faster inference with minimal quality loss
