@@ -28,12 +28,12 @@ Output: `MEAT PRODUCTS -> I DON'T KNOW
 Ingredient: POMEGRANTE SCHNAPPS
 Output: `AGRICULTURAL PROCESSED -> I DON'T KNOW`
 """,
-"bootstrap_description": """
+    "bootstrap_description": """
 Ingredient: {ingredient}
 
 Write a brief description of the ingredient and its properties. This will help you to categorize the ingredient more accurately.
 """,
-"labeling_notes": """
+    "labeling_notes": """
 The following notes should be considered when categorizing the ingredients:
 - liquors (including schnapps) that are not beers or wines must be categorized as 'AGRICULTURAL PROCESSED -> I DON'T KNOW'
 - dried fruits, vegetables, spicies, seeds, and mushrooms are inside the 'CROPS' category despite being processed
@@ -101,5 +101,5 @@ Select the appropriate category at the current hierarchical level as only one of
 
 Reply with just the category name or 'I DON'T KNOW' if you are not sure, do not generate any other text.
 
-"""
+""",
 }
