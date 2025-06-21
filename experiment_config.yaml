@@ -8,8 +8,8 @@ item_inter_num_interval: "[5,inf)"
 # data preprocessing for knowledge graph triples
 kg_reverse_r: False
 entity_kg_num_interval: "[10,inf)"
-user_entity_kg_num_interval: "[2,inf)"
 relation_kg_num_interval: "[1,inf)"
+data_path: ./recbole_data
 dataset: hummus
 
 valid_metric: ndcg@10
@@ -22,7 +22,5 @@ eval_args:                      # (dict) 4 keys: group_by, order, split, and mod
 load_col: 
     inter: ['user_id', 'recipe_id', 'rating', 'timestamp']
     kg: ['head_id', 'relation_id', 'tail_id']
-    user_link: ['user_id', 'entity_id']
-    item_link: ['recipe_id', 'entity_id']
     link: ['recipe_id', 'entity_id']
   

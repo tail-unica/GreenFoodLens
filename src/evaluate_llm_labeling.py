@@ -13,7 +13,6 @@ parser.add_argument(
 )
 parser.add_argument(
     "--truth_labels_file",
-    default="accepted_mturk_df_with_fixed_collisions_update.csv",
     help="Specify the file path of the truth labels",
 )
 args = parser.parse_args()
