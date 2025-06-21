@@ -273,7 +273,7 @@ If you use this code or dataset in your research, please cite our paper:
 
 ## Hyper-parameters for Recommender Systems with Recbole
 
-All the models are trained for 300 epochs with early stopping on the validation set on NDCG@10, with a patience of 10 epochs.
+All the models are trained for 100 epochs with early stopping on the validation set on NDCG@10, with a patience of 10 epochs.
 We optimized the hyperparameters based on the grid search tables suggested by Recbole for the models we employed, which are reported in [Recbole Hyper-parameters Search Results](https://recbole.io/hyperparameters/index.html). Specifically, we used the grid reported for MovieLens-1M, which does not include DiffRec. For this model, we adopted a smaller set of the hyper-parameters proposed in the [DiffRec paper](https://dl.acm.org/doi/10.1145/3539618.3591663).
 The full grid is reported here for reference:
 
@@ -283,11 +283,11 @@ The full grid is reported here for reference:
 | BPR       | learning_rate  | [5e-5,**1e-4**,5e-4,7e-4,1e-3,5e-3,7e-3]                                |
 | DiffRec   | embedding_size | [**10**]                                                                |
 |           | dims_dnn       | [**'[300]'**,'[200,600]','[1000]']                                      |
-|           | learning_rate  | [**1e-05**,1e-04,1e-03,1e-02]                                           |
+|           | learning_rate  | [**1e-5**,1e-4,1e-3,1e-2]                                           |
 |           | steps          | [2,5,**10**,40,50,100]                                                  |
 | LightGCN  | n_layers       | [1,**2**,3,4]                                                           |
 |           | learning_rate  | [5e-4,**1e-3**,2e-3]                                                    |
-|           | reg_weight     | [1e-05,1e-04,**1e-03**,1e-02]                                           |
+|           | reg_weight     | [1e-5,1e-4,**1e-3**,1e-2]                                           |
 | KGAT      | layers         | [**'[64,32,16]'**,'[64,64,64]','[128,64,32]']                           |
 |           | mess_dropout   | [0.1,**0.2**,0.3,0.4,0.5]                                               |
 |           | learning_rate  | [1e-2,5e-3,1e-3,**5e-4**,1e-4]                                          |
