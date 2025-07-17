@@ -20,7 +20,7 @@ if __name__ == "__main__":
         "model_files",
         type=str,
         nargs="+",
-        help="The path of the model files pre-trained by RecBole",
+        help="The path of the model files pre-trained by recbole",
     )
     parser.add_argument(
         "--recipes_with_cf_wf",
@@ -110,6 +110,18 @@ if __name__ == "__main__":
 
                 print(result)
 
+                result_filepath = os.path.join(args.plots_path, "topk_result_per_model.pkl")
+                if os.path.exists(result_filepath):
+                    with open(result_filepath, "rb") as f:
+                        existing_result = pickle.load(f)
+                    existing_result[model.__class__.__name__] = result
+                    result = existing_result
+                else:
+                    result = {model.__class__.__name__: result}
+
+                with open(result_filepath, "wb") as f:
+                    pickle.dump(result, f)
+
             topk_lists = []
             users = test_data.user_df[test_data.uid_field]
             for user_batch in torch.split(users, args.eval_batch_size):
@@ -149,11 +161,11 @@ if __name__ == "__main__":
         with open(topk_cf_wf_dict_filename, "rb") as f:
             topk_cf_wf_per_model = pickle.load(f)
 
-    models_list = ["KGAT", "MultiVAE", "Pop"]  # list(topk_cf_wf_per_model.keys())
+    models_list = ["KGAT", "LightGCN", "Pop"]  # list(topk_cf_wf_per_model.keys())
     cf_threshold = 10
     wf_threshold = 35000
-    cf_label = "CF (Kgs CO$_{2}$eq/kg)"
-    wf_label = "WF (Liters water/kg)"
+    cf_label = "CFP (Kgs CO$_{2}$eq/kg)"
+    wf_label = "WFP (Liters water/kg)"
 
     samples, hue = [], []
     heatmap_cf_list, heatmap_wf_list = [], []

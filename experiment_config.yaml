@@ -12,6 +12,7 @@ relation_kg_num_interval: "[1,inf)"
 data_path: ./recbole_data
 dataset: hummus
 
+eval_batch_size: 16384
 valid_metric: ndcg@10
 eval_args:                      # (dict) 4 keys: group_by, order, split, and mode
   split: {'RS':[0.7,0.1,0.2]}   # (dict) The splitting strategy ranging in ['RS','LS'].
@@ -23,4 +24,3 @@ load_col:
     inter: ['user_id', 'recipe_id', 'rating', 'timestamp']
     kg: ['head_id', 'relation_id', 'tail_id']
     link: ['recipe_id', 'entity_id']
-  

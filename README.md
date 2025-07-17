@@ -256,20 +256,18 @@ To installa llama-cpp-python with GPU support, please follow the instructions in
 
 See `pyproject.toml` for complete dependency list.
 
-<!-- ## 📄 Citation
+📄 Citation
 
 If you use this code or dataset in your research, please cite our paper:
 
 ```bibtex
-@article{your_paper_2024,
+@article{greenfoodlens_recsys2025,
   title={GreenFoodLens: Sustainability-Aware Food Recommendation with LLM-Based Ingredient Labeling},
-  author={Your Authors},
-  journal={Your Journal},
-  year={2024}
+  author={Giacomo Balloccu and Ludovico Boratto and Gianni Fenu and Mirko Marras and Giacomo Medda and Giovanni Murgia},
+  booktitle={Proceedings of the 19th {ACM} Conference on Recommender Systems, RecSys 2025, Praga, Czech Republic, September 22-26, 2025},
+  year={2025}
 }
 ```
--->
-
 
 ## Hyper-parameters for Recommender Systems with Recbole
 
@@ -282,16 +280,16 @@ The full grid is reported here for reference:
 | Pop       | -              | -                                                                       |
 | BPR       | learning_rate  | [5e-5,**1e-4**,5e-4,7e-4,1e-3,5e-3,7e-3]                                |
 | DiffRec   | embedding_size | [**10**]                                                                |
-|           | dims_dnn       | [**'[300]'**,'[200,600]','[1000]']                                      |
-|           | learning_rate  | [**1e-5**,1e-4,1e-3,1e-2]                                           |
-|           | steps          | [2,5,**10**,40,50,100]                                                  |
+|           | dims_dnn       | ['[300]',**'[200,600]'**,'[1000]']                                      |
+|           | learning_rate  | [1e-5,**1e-4**,1e-3,1e-2]                                               |
+|           | steps          | [**2**,5,10,40,50,100]                                                  |
 | LightGCN  | n_layers       | [1,**2**,3,4]                                                           |
-|           | learning_rate  | [5e-4,**1e-3**,2e-3]                                                    |
-|           | reg_weight     | [1e-5,1e-4,**1e-3**,1e-2]                                           |
-| KGAT      | layers         | [**'[64,32,16]'**,'[64,64,64]','[128,64,32]']                           |
-|           | mess_dropout   | [0.1,**0.2**,0.3,0.4,0.5]                                               |
+|           | learning_rate  | [5e-4,1e-3,**2e-3**]                                                    |
+|           | reg_weight     | [1e-5,**1e-4**,1e-3,1e-2]                                               |
+| KGAT      | layers         | ['[64,32,16]',**'[64,64,64]'**,'[128,64,32]']                           |
+|           | mess_dropout   | [**0.1**,0.2,0.3,0.4,0.5]                                               |
 |           | learning_rate  | [1e-2,5e-3,1e-3,**5e-4**,1e-4]                                          |
-|           | reg_weight     | [1e-4,5e-5,**1e-5**,5e-6,1e-6]                                          |
+|           | reg_weight     | [1e-4,5e-5,1e-5,5e-6,**1e-6**]                                          |
 | MultiVAE  | learning_rate  | [5e-5,1e-4,**5e-4**,7e-4,1e-3,5e-3,7e-3]                                | 
 
 ## 📈 Results
